@@ -1,138 +1,231 @@
 {
-    "name": "Abhishek",
-    "surname": "Gharat",
-    "headerTaglineOne": "Hello 👋",
-    "headerTaglineTwo": "I'm Abhishek Gharat - ",
-    "headerTaglineThree": " Frontend devloper",
-    "headerTaglineFour": " based in Mumbai, India.",
-    "showCursor": false,
-    "showBlog": true,
-    "darkMode": true,
-    "showResume": true,
-    "socials": [
-      {
-        "id": "1",
-        "title": "Github",
-        "link": "https://github.com/Abhishek-Gharat"
-      },
-      {
-        "id": "2",
-        "title": "LinkedIn",
-        "link": "https://www.linkedin.com/in/abhishek-gharat-922237218/"
-      },
-      {
-        "id": "3",
-        "title": "Twitter",
-        "link": "https://twitter.com/ABHISHEK09767"
-      },
-  
-      {
-        "id": "5",
-        "title": "Email",
-        "link": "mailto:gharatabhi53@gmail.com"
-      }
-      
-    ],
-    "projects": [
-         {
-        "id": "1",
-        "title": "NODE FLOW AUTOMATION",
-        "description": "Node Flow Automation is a tool for creating and managing flow diagrams effortlessly. You can draw diagrams intuitively and seamlessly navigate between nodes. Easily download your diagrams as images or upload JSON files to create diagrams instantly.",
-        "imageSrc": "https://dl.dropboxusercontent.com/scl/fi/n1htgstee1ns76o65arw6/Screenshot-50.png?rlkey=523mvk6trdgvxfy1zjtnazehr&st=tmdrvls7&dl=0",
-        "url": "https://node-flow-automation-tool.vercel.app/"
-      },
-      {
-        "id": "2",
-        "title": "BOOKING-APP",
-        "description": "A responsive booking app with a sleek UI, featuring a dark mode, a favorites list, and multiple other functionalities to enhance the renting experience",
-        "imageSrc": "https://dl.dropboxusercontent.com/scl/fi/0v85s3bxrqf6dggj6u5q3/Screenshot-43.png?rlkey=eeq2262e2x6ci0mfx8tlfxypl&st=eoml15sf&dl=0",
-        "url": "https://booking-react-app-one.vercel.app/"
-      },
-      {
-        "id": "3",
-        "title": " CHAT AI WEB APP",
-        "description": " An AI-powered chat web app providing intelligent and interactive communication with users",
-        "imageSrc": "https://dl.dropboxusercontent.com/scl/fi/s5qbiu021njpx3xffmbmj/Screenshot-2024-06-13-130553.png?rlkey=t03r0y4ye6vkmhfckv3cilb6q&st=i65ov03z&dl=0",
-        "url": "https://chat-web-app-7ibf.vercel.app/"
-      },
-      {
-        "id": "4",
-        "title": "NOTES APP",
-        "description": "NOTES TAKING Application",
-        "imageSrc": "https://dl.dropboxusercontent.com/scl/fi/g8nlq7395u63wbxy1fc1d/Screenshot-42.png?rlkey=xhbu54z3ai530y4h07wih5fzg&st=zue2kzm4&dl=0",
-        "url": "https://note-app-qvjn.vercel.app/"
-      },
-    
-      {
-        "id": "5",
-        "title": "1:1 Meeting APP",
-        "description": "Utilizing Socket.IO, this project develops a 1:1 Meeting App that enables real-time, interactive meetings between users, ensuring seamless communication and connectivity",
-        "imageSrc": "https://i.postimg.cc/MKj8y7MD/Screenshot-45.png",
-        "url": "https://1-1-meeting.vercel.app/"
-      },
-      {
-        "id": "6",
-        "title": "NODE BASED COLOR GEN",
-        "description": "Using the React Flow library, this project changes the background color dynamically when nodes are connected, creating an interactive visual experience",
-        "imageSrc": "https://i.postimg.cc/4yv4Qpnn/Screenshot-46.png",
-        "url": "https://nodebasecolorgen.vercel.app/"
-      }
-    ],
-    "services": [
-      {
-        "id": "1",
-        "title": "Aceternity UI",
-        "description": "Aceternity UI is a sleek and modern user interface framework designed for building intuitive and responsive web applications. It offers a comprehensive set of components and tools, making it easy for developers to create visually appealing and user-friendly interfaces."
-      },
-      {
-        "id": "2",
-        "title": "React FLOW",
-        "description": "React Flow is a powerful library for building interactive node-based applications in React. It provides a comprehensive set of features and components to create and manage flow-based diagrams, such as process flows, decision trees, and workflow editors"},
-      {
-        "id": "3",
-        "title": "Material UI",
-        "description": "Material-UI (MUI) is a popular React component library that implements Google's Material Design guidelines. It provides a comprehensive set of pre-styled, customizable components that help developers build consistent, visually appealing, and responsive user interfaces quickly."
-      },
-      {
-        "id": "4",
-        "title": "Framer Motion",
-        "description": "Framer Motion is a powerful, open-source animation library for React that enables developers to create smooth, declarative animations and interactions. It combines ease of use with advanced capabilities, making it a popular choice for both simple and complex animation needs."
-      }
-    ],
-    "aboutpara": "As a Software Developer Intern at RCube Consulting, my current engagement involves utilizing Express.js, Material-UI, and Javascript to develop robust web solutions. With a strong foundation in Information Technology from my ongoing Master's at Chandigarh University and a Bachelor's from the University of Mumbai, I am committed to honing my technical skills and contributing to the tech community. My participation in neoG Camp and a brief stint with the Google Developers Group exemplify my dedication to continuous learning and professional growth. The practical experience I'm gaining at RCube Consulting complements the theoretical knowledge from my advanced studies, positioning me to effectively tackle diverse challenges in the software development landscape.",
-    "resume": {
-      "tagline": "👋  I'm a software engineer, product designer.",
-      "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
-      "experiences": [
-       
-        {
-          "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-          "dates": "DEC 2023 - Present",
-          "type": "Intern",
-          "position": "Software Developer at Rcube Consulting",
-          "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
-        }
-      ],
-      "education": {
-        "universityName": " Chandigrah University ",
-        "universityDate": "2022-2024"
-      },
-      "languages": [
-        "Javascript",
-        "HTML5",
-        "CSS",
-        "Java"
-      ],
-      "frameworks": [
-        "React",
-        "Typescript",
-        "NodeJs",
-        "nextjs"
-      ],
-      "others": [
-        "Figma",
-        "AdobeXD",
-        "AWS"
-      ]
+  "name": "Abhishek",
+  "surname": "Gharat",
+  "title": "Frontend Developer",
+  "tagline": "Building Interfaces That Think In Flows",
+  "subheadline": "Frontend Developer specializing in React Flow, Next.js, and workflow automation systems.",
+  "description": "Frontend developer with experience building workflow automation tools, production-grade applications, and scalable user interfaces using React, Next.js, TypeScript, and modern frontend technologies.",
+  "location": "Mumbai, Maharashtra, India",
+  "email": "gharatabhi53@gmail.com",
+  "showCursor": false,
+  "showBlog": true,
+  "darkMode": true,
+  "showResume": true,
+  "certification": "Completed a 6-month Full Stack Development Bootcamp through upGrad",
+  "socials": [
+    {
+      "id": "1",
+      "title": "GitHub",
+      "link": "https://github.com/Abhishek-Gharat",
+      "icon": "github"
+    },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/abhishek-gharat-922237218/",
+      "icon": "linkedin"
+    },
+    {
+      "id": "3",
+      "title": "Email",
+      "link": "mailto:gharatabhi53@gmail.com",
+      "icon": "email"
     }
+  ],
+  "hero": {
+    "headline": "Frontend Developer",
+    "subheadline": "Building Interfaces That Think In Flows",
+    "description": "Frontend developer with experience building workflow automation tools, production-grade applications, and scalable user interfaces using React, Next.js, TypeScript, and modern frontend technologies.",
+    "stats": [
+      { "num": "2+", "label": "Years" },
+      { "num": "3", "label": "Companies" },
+      { "num": "3", "label": "Projects" },
+      { "num": "∞", "label": "Flows Automated" }
+    ]
+  },
+  "skills": {
+    "frontend": [
+      { "name": "React", "level": 90 },
+      { "name": "Next.js", "level": 85 },
+      { "name": "TypeScript", "level": 80 },
+      { "name": "JavaScript", "level": 95 },
+      { "name": "React Flow", "level": 88 },
+      { "name": "HTML5", "level": 90 },
+      { "name": "CSS3", "level": 88 },
+      { "name": "Ant Design", "level": 85 },
+      { "name": "Material UI", "level": 82 },
+      { "name": "React Native", "level": 75 }
+    ],
+    "backend": [
+      { "name": "Node.js", "level": 80 },
+      { "name": "Express", "level": 78 },
+      { "name": "REST API", "level": 85 },
+      { "name": "MongoDB", "level": 75 },
+      { "name": "PostgreSQL", "level": 72 },
+      { "name": "SQL", "level": 70 },
+      { "name": "FastAPI", "level": 65 },
+      { "name": "Flask", "level": 62 },
+      { "name": "Laravel", "level": 60 }
+    ],
+    "tools": [
+      { "name": "Git", "level": 88 },
+      { "name": "GitHub", "level": 90 },
+      { "name": "Figma", "level": 78 },
+      { "name": "Debugging", "level": 85 },
+      { "name": "Web Performance", "level": 80 },
+      { "name": "Problem Solving", "level": 85 }
+    ]
+  },
+  "experience": [
+    {
+      "id": "1",
+      "company": "Hridayam Soft Solutions",
+      "position": "Frontend Developer",
+      "type": "Full-time",
+      "duration": "Oct 2024 - May 2025",
+      "location": "Mumbai, India (Onsite)",
+      "description": "Worked on Collection System production project. Built frontend using Next.js and Ant Design. Integrated REST APIs with Laravel backend. Developed reusable internal npm modules.",
+      "achievements": [
+        "Built frontend for Collection System production project",
+        "Integrated REST APIs with Laravel backend",
+        "Developed reusable internal npm modules",
+        "Worked with PostgreSQL database"
+      ],
+      "technologies": ["Next.js", "TypeScript", "Ant Design", "Laravel", "PostgreSQL", "Git"]
+    },
+    {
+      "id": "2",
+      "company": "Gnapika",
+      "position": "Frontend Developer",
+      "type": "Freelance",
+      "duration": "Jul 2024 - Sep 2024",
+      "location": "Remote",
+      "description": "Built frontend for an e-commerce platform. Integrated APIs with Flask and FastAPI backends. Developed reusable frontend components. Improved shopping experience and user engagement.",
+      "achievements": [
+        "Built frontend for e-commerce platform",
+        "Integrated APIs with Flask and FastAPI backends",
+        "Developed reusable frontend components",
+        "Improved shopping experience and user engagement"
+      ],
+      "technologies": ["React", "JavaScript", "Flask", "FastAPI"]
+    },
+    {
+      "id": "3",
+      "company": "RCube Consulting",
+      "position": "Software Developer Intern",
+      "type": "Internship",
+      "duration": "Dec 2023 - Apr 2024",
+      "location": "USA (Remote)",
+      "description": "Developed interactive diagrams using React Flow. Visualized business processes and workflows. Enabled drag-and-connect node interactions. Improved reporting and process visualization systems.",
+      "achievements": [
+        "Developed interactive diagrams using React Flow",
+        "Visualized business processes and workflows",
+        "Enabled drag-and-connect node interactions",
+        "Improved reporting and process visualization systems"
+      ],
+      "technologies": ["React", "React Flow", "JavaScript"]
+    }
+  ],
+  "education": [
+    {
+      "id": "1",
+      "institution": "Chandigarh University",
+      "degree": "Master of Computer Applications",
+      "field": "Information Technology",
+      "duration": "Jul 2022 - Jul 2024",
+      "location": "Chandigarh, India",
+      "cgpa": "7.48/10",
+      "description": "Master of Computer Applications in Information Technology with focus on modern web development and software engineering."
+    },
+    {
+      "id": "2",
+      "institution": "Mumbai University",
+      "degree": "Bachelor of Science",
+      "field": "Information Technology",
+      "duration": "Jul 2019 - Jul 2021",
+      "location": "Mumbai, India",
+      "percentage": "60%",
+      "description": "Bachelor of Science in Information Technology."
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Node Flow Automation",
+      "description": "Visual workflow builder built using React Flow. Users can create workflows visually with drag-and-connect node interactions, download diagrams as images, save as JSON, and upload JSON files.",
+      "longDescription": "Built a node-based visual editor that allows users to create complex automation workflows without writing code. Features include drag-and-drop functionality, JSON import/export, and image download capabilities.",
+      "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "url": "https://node-flow-automation-tool.vercel.app/",
+      "github": "https://github.com/Abhishek-Gharat",
+      "tags": ["React", "React Flow", "JavaScript"],
+      "featured": true
+    },
+    {
+      "id": "2",
+      "title": "Hotel Booking System",
+      "description": "Full-stack hotel booking application with React frontend and Node.js backend. Features Express.js API and MongoDB for data storage.",
+      "longDescription": "Developed a full-featured booking platform with React frontend, Express.js backend, and MongoDB database for storing booking data.",
+      "imageSrc": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+      "url": "https://booking-react-app-one.vercel.app/",
+      "github": "https://github.com/Abhishek-Gharat",
+      "tags": ["React", "Node.js", "Express", "MongoDB"],
+      "featured": true
+    },
+    {
+      "id": "3",
+      "title": "Book Renting App",
+      "description": "Full CRUD book renting application built with React and Framer Motion for smooth animations and interactions.",
+      "longDescription": "Created a book renting application with full CRUD operations using React and Framer Motion for animations.",
+      "imageSrc": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=600&fit=crop",
+      "url": "https://note-app-qvjn.vercel.app/",
+      "github": "https://github.com/Abhishek-Gharat",
+      "tags": ["React", "Framer Motion", "CRUD"],
+      "featured": true
+    }
+  ],
+  "about": {
+    "heading": "System Identity",
+    "intro": "Frontend developer with experience building workflow automation tools, production-grade applications, and scalable user interfaces using React, Next.js, TypeScript, and modern frontend technologies.",
+    "paragraphs": [
+      "I specialize in building systems that think in flows. My experience includes developing interactive workflow diagrams using React Flow, building production-grade Next.js applications, and creating reusable component libraries.",
+      "At Hridayam Soft Solutions, I worked on a Collection System production project using Next.js and Ant Design, integrating REST APIs with Laravel backend and PostgreSQL database. I also developed reusable internal npm modules.",
+      "I completed a 6-month Full Stack Development Bootcamp through upGrad, and I hold a Master of Computer Applications degree from Chandigarh University with a CGPA of 7.48/10."
+    ],
+    "interests": ["Workflow Automation", "React Flow", "System Architecture", "UI/UX Design", "Web Performance"]
+  },
+  "resume": {
+    "tagline": "Frontend Developer specializing in React Flow & Next.js",
+    "description": "Frontend developer with experience building workflow automation tools, production-grade applications, and scalable user interfaces using React, Next.js, TypeScript, and modern frontend technologies.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "Oct 2024 - May 2025",
+        "type": "Full-time",
+        "position": "Frontend Developer at Hridayam Soft Solutions",
+        "bullets": "Built frontend for Collection System production project using Next.js and Ant Design\nIntegrated REST APIs with Laravel backend and PostgreSQL\nDeveloped reusable internal npm modules\nCollaborated using Git/GitHub"
+      },
+      {
+        "id": "2",
+        "dates": "Jul 2024 - Sep 2024",
+        "type": "Freelance",
+        "position": "Frontend Developer at Gnapika",
+        "bullets": "Built frontend for e-commerce platform\nIntegrated APIs with Flask and FastAPI backends\nDeveloped reusable frontend components"
+      },
+      {
+        "id": "3",
+        "dates": "Dec 2023 - Apr 2024",
+        "type": "Internship",
+        "position": "Software Developer Intern at RCube Consulting",
+        "bullets": "Developed interactive diagrams using React Flow\nVisualized business processes and workflows\nEnabled drag-and-connect node interactions"
+      }
+    ],
+    "education": {
+      "universityName": "Chandigarh University",
+      "universityDate": "Jul 2022 - Jul 2024",
+      "universityPara": "Master of Computer Applications in Information Technology (CGPA: 7.48/10)"
+    },
+    "languages": ["JavaScript", "TypeScript", "HTML5", "CSS3"],
+    "frameworks": ["React", "Next.js", "React Flow", "Express", "Node.js"],
+    "others": ["Git", "GitHub", "Figma", "PostgreSQL", "MongoDB"]
   }
+}

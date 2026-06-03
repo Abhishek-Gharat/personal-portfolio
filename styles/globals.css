@@ -1,77 +1,225 @@
-@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
+@import './markdown.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./markdown.css";
+
+/* CSS Variables - Universe Color System */
+:root {
+  /* Background layers */
+  --bg-deep: #050508;
+  --bg-surface: #0a0a10;
+  --bg-surface-2: #0f0f18;
+  --bg-card: #12121a;
+  
+  /* Borders */
+  --border-subtle: #1a1a2e;
+  --border-default: #252540;
+  --border-hover: #353560;
+  
+  /* Accents - Neon system */
+  --accent-primary: #00ff88;
+  --accent-secondary: #7c3aed;
+  --accent-tertiary: #f59e0b;
+  
+  /* Text */
+  --text-primary: #e8e8f0;
+  --text-secondary: #8888aa;
+  --text-muted: #555570;
+  
+  /* Universe glows */
+  --glow-primary: rgba(0, 255, 136, 0.3);
+  --glow-secondary: rgba(124, 58, 237, 0.3);
+}
 
 * {
-  font-family: "Hind";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  @apply dark:bg-black dark:text-white;
+  font-family: 'Barlow', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-.gradient-circle {
-  position: absolute;
-  pointer-events: none;
-  z-index: 100;
-  top: -30px;
-  height: 40px;
-  width: 100vw;
-  opacity: 0.5;
-  filter: blur(40px);
-  background: radial-gradient(
-    circle,
-    rgb(255, 204, 134) 0%,
-    rgba(107, 107, 248, 0.8) 100%
-  );
-}
-.gradient-circle-bottom {
-  position: absolute;
-  pointer-events: none;
-  z-index: 100;
-  bottom: -20px;
-  height: 30px;
-  width: 100vw;
-  opacity: 0.5;
-  filter: blur(40px);
-  background: radial-gradient(
-    circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(0, 0, 255, 0.8) 100%
-  );
+/* Typography */
+.font-mono {
+  font-family: 'Space Mono', monospace;
 }
 
-.gradient-shadow:hover::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(-45deg, #000000 0%, #ff1b6b 100%);
-  transform: translate3d(0px, 20px, 0) scale(0.95);
-  filter: blur(20px);
-  opacity: var(0.7);
-  transition: opacity 0.3s;
-  border-radius: inherit;
+.font-condensed {
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
-/* 
-* Prevents issues when the parent creates a 
-* stacking context. (For example, using the transform
-* property )
-*/
-.gradient-shadow:hover::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: inherit;
-  border-radius: inherit;
+/* Section Styles */
+.section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent-primary);
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.95;
+  color: #fff;
+}
+
+/* Glass Panel */
+.glass {
+  background: rgba(10, 10, 16, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-default);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-primary);
+  color: var(--bg-deep);
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .section-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+  }
+  
+  .section-eyebrow::before {
+    width: 16px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+  
+  /* Larger touch targets on mobile */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --border-default: #444466;
+    --text-secondary: #aaaacc;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .section {
+    min-height: auto;
+    page-break-inside: avoid;
+  }
+}
+
+/* Dark mode is always on for this design */
+.dark {
+  color-scheme: dark;
 }

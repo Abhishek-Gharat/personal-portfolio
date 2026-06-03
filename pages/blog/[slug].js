@@ -34,23 +34,33 @@ const BlogPost = ({ post }) => {
       </Head>
       {data.showCursor && <Cursor />}
 
-      <div className={`container mx-auto mt-10 ${data.showCursor && "cursor-none"}`}>
-        <Header isBlog={true} />
-        <div className="mt-10 flex flex-col">
-          <img
-            className="w-full h-96 rounded-lg shadow-lg object-cover"
-            src={post.image}
-            alt={post.title}
-          />
-          <h1 ref={textOne} className="mt-10 text-4xl mob:text-2xl laptop:text-6xl text-bold">
-            {post.title}
-          </h1>
-          <h2 ref={textTwo} className="mt-2 text-xl max-w-4xl text-darkgray opacity-50">
-            {post.tagline}
-          </h2>
-        </div>
-        <ContentSection content={post.content} />
-        <Footer />
+      <div className={`min-h-screen bg-white dark:bg-dark-bg text-gray-900 dark:text-white ${data.showCursor && "cursor-none"}`}>
+        <Header />
+        
+        <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <img
+              className="w-full h-64 md:h-96 rounded-2xl shadow-lg object-cover mb-10"
+              src={post.image}
+              alt={post.title}
+            />
+            <h1 
+              ref={textOne} 
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            >
+              {post.title}
+            </h1>
+            <h2 
+              ref={textTwo} 
+              className="text-lg md:text-xl text-gray-400 mb-10"
+            >
+              {post.tagline}
+            </h2>
+            <ContentSection content={post.content} />
+          </div>
+        </main>
+
+        <Footer data={data} />
       </div>
       
       {process.env.NODE_ENV === "development" && (
