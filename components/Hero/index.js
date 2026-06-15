@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import HeroGraph from '../HeroGraph';
 
 const ParticleField = () => {
   const canvasRef = useRef(null);
@@ -118,7 +119,11 @@ const Hero = ({ data }) => {
       ref={heroRef}
       id="hero"
       className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden"
+      style={{ backgroundColor: '#080b14' }}
     >
+      {/* Three.js Hero Graph */}
+      <HeroGraph />
+
       {/* Particle Background */}
       <ParticleField />
       
@@ -132,7 +137,10 @@ const Hero = ({ data }) => {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full">
+      <div
+        className="relative z-10 max-w-7xl mx-auto w-full"
+        style={{ userSelect: 'none' }}
+      >
         {/* Top Label */}
         <div 
           className={`mb-8 transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
@@ -147,28 +155,32 @@ const Hero = ({ data }) => {
 
         {/* Main Name */}
         <div className="mb-6">
-          <h1 
+          <h1
             className={`font-condensed font-black text-[clamp(4rem,12vw,10rem)] leading-[0.85] tracking-[-0.02em] uppercase transition-all duration-700 delay-100 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            style={{ textShadow: '0 2px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.6)' }}
           >
             {data.name}
           </h1>
-          <h1 
+          <h1
             className={`font-condensed font-black text-[clamp(4rem,12vw,10rem)] leading-[0.85] tracking-[-0.02em] uppercase text-[#00ff88] transition-all duration-700 delay-200 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            style={{ textShadow: '0 2px 20px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 255, 136, 0.2)' }}
           >
             {data.surname}
           </h1>
         </div>
 
         {/* Subtitle - Updated from resume */}
-        <p 
-          className={`font-condensed text-[clamp(1.2rem,3vw,2rem)] font-light text-[#8888aa] tracking-[0.05em] uppercase mb-4 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+        <p
+          className={`font-condensed text-[clamp(1.2rem,3vw,2rem)] font-light text-[#00ff88] tracking-[0.05em] uppercase mb-4 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          style={{ textShadow: '0 2px 16px rgba(0, 0, 0, 0.8)' }}
         >
           {data.subheadline}
         </p>
 
         {/* Description - Updated from resume */}
-        <p 
-          className={`text-[#8888aa] text-base md:text-lg max-w-2xl mb-12 transition-all duration-700 delay-350 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+        <p
+          className={`text-white text-base md:text-lg max-w-2xl mb-12 transition-all duration-700 delay-350 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          style={{ textShadow: '0 1px 12px rgba(0, 0, 0, 0.8)' }}
         >
           {data.description}
         </p>

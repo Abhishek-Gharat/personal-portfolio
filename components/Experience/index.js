@@ -167,7 +167,7 @@ const ExperienceWorkflow = ({ experience, education }) => {
       {/* Process nodes */}
       <div className="space-y-8">
         {combined.map((item, index) => (
-          <div key={item.id} className="relative">
+          <div key={`${item.type}-${item.id}`} className="relative">
             {/* Side connector line */}
             <div className="hidden lg:block absolute left-0 top-8 bottom-0 w-16">
               <svg width="100%" height="100%" className="overflow-visible">

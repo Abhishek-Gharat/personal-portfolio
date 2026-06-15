@@ -84,12 +84,13 @@
       "type": "Full-time",
       "duration": "Oct 2024 - May 2025",
       "location": "Mumbai, India (Onsite)",
-      "description": "Worked on Collection System production project. Built frontend using Next.js and Ant Design. Integrated REST APIs with Laravel backend. Developed reusable internal npm modules.",
+      "description": "Worked on a live production project named Collection System as a frontend developer. Collaborated with backend developers to integrate RESTful APIs into CMS-style frontend components. Built and designed the frontend using Next.js and Ant Design with responsive and dynamic user experience. Used Git/GitHub for version control and participated in code reviews. Developed and maintained custom NPM packages.",
       "achievements": [
-        "Built frontend for Collection System production project",
-        "Integrated REST APIs with Laravel backend",
-        "Developed reusable internal npm modules",
-        "Worked with PostgreSQL database"
+        "Worked on live production Collection System project",
+        "Integrated RESTful APIs with Laravel and PostgreSQL backend",
+        "Built frontend using Next.js and Ant Design",
+        "Developed reusable custom NPM packages",
+        "Participated in code reviews and team collaboration"
       ],
       "technologies": ["Next.js", "TypeScript", "Ant Design", "Laravel", "PostgreSQL", "Git"]
     },
@@ -100,14 +101,14 @@
       "type": "Freelance",
       "duration": "Jul 2024 - Sep 2024",
       "location": "Remote",
-      "description": "Built frontend for an e-commerce platform. Integrated APIs with Flask and FastAPI backends. Developed reusable frontend components. Improved shopping experience and user engagement.",
+      "description": "Built the frontend for an e-commerce website, ensuring a responsive and user-friendly interface. Collaborated with Back-end developers to manage routing and API integration, utilizing Python, Flask, and FastAPI. Developed and maintained frontend components to streamline shopping experiences and enhance user engagement.",
       "achievements": [
-        "Built frontend for e-commerce platform",
+        "Built frontend for e-commerce website",
         "Integrated APIs with Flask and FastAPI backends",
-        "Developed reusable frontend components",
-        "Improved shopping experience and user engagement"
+        "Developed responsive and user-friendly interface",
+        "Enhanced shopping experiences and user engagement"
       ],
-      "technologies": ["React", "JavaScript", "Flask", "FastAPI"]
+      "technologies": ["React", "JavaScript", "Flask", "FastAPI", "Python"]
     },
     {
       "id": "3",
@@ -115,13 +116,13 @@
       "position": "Software Developer Intern",
       "type": "Internship",
       "duration": "Dec 2023 - Apr 2024",
-      "location": "USA (Remote)",
-      "description": "Developed interactive diagrams using React Flow. Visualized business processes and workflows. Enabled drag-and-connect node interactions. Improved reporting and process visualization systems.",
+      "location": "New York (USA Remote)",
+      "description": "Developed interactive diagrams using React Flow, a library for creating visualizations and workflows. Visualized core business processes, streamlining the reporting process. Enabled users to drag and connect nodes for interactive process visualization.",
       "achievements": [
         "Developed interactive diagrams using React Flow",
-        "Visualized business processes and workflows",
-        "Enabled drag-and-connect node interactions",
-        "Improved reporting and process visualization systems"
+        "Visualized core business processes",
+        "Streamlined reporting process",
+        "Enabled drag-and-connect node interactions"
       ],
       "technologies": ["React", "React Flow", "JavaScript"]
     }
@@ -130,12 +131,12 @@
     {
       "id": "1",
       "institution": "Chandigarh University",
-      "degree": "Master of Computer Applications",
-      "field": "Information Technology",
+      "degree": "Master in Computer Applications",
+      "field": "Computer Applications",
       "duration": "Jul 2022 - Jul 2024",
-      "location": "Chandigarh, India",
+      "location": "Mohali, Kharar",
       "cgpa": "7.48/10",
-      "description": "Master of Computer Applications in Information Technology with focus on modern web development and software engineering."
+      "description": "Master in Computer Applications with focus on modern web development and software engineering."
     },
     {
       "id": "2",
@@ -143,7 +144,7 @@
       "degree": "Bachelor of Science",
       "field": "Information Technology",
       "duration": "Jul 2019 - Jul 2021",
-      "location": "Mumbai, India",
+      "location": "Mumbai, Palghar",
       "percentage": "60%",
       "description": "Bachelor of Science in Information Technology."
     }
@@ -151,17 +152,30 @@
   "projects": [
     {
       "id": "1",
-      "title": "Node Flow Automation",
-      "description": "Visual workflow builder built using React Flow. Users can create workflows visually with drag-and-connect node interactions, download diagrams as images, save as JSON, and upload JSON files.",
-      "longDescription": "Built a node-based visual editor that allows users to create complex automation workflows without writing code. Features include drag-and-drop functionality, JSON import/export, and image download capabilities.",
-      "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      "url": "https://node-flow-automation-tool.vercel.app/",
+      "title": "ReactViz",
+      "description": "Interactive codebase explorer that helps new developers understand unfamiliar projects faster through dependency mapping, circular dependency detection, analysis history, and AI explanations.",
+      "longDescription": "Developed an interactive codebase explorer using React, Vite, Express.js, SQLite, and React Flow. Reduced developer onboarding time by delivering visual architecture insights and code relationship analysis.",
+      "imageSrc": "https://images.unsplash.com/photo-1633356122544-f134324ef6cb?w=800&h=600&fit=crop",
+      "url": "https://literate-engine-chi.vercel.app/",
       "github": "https://github.com/Abhishek-Gharat",
-      "tags": ["React", "React Flow", "JavaScript"],
+      "tags": ["React", "React Flow", "Express.js", "SQLite", "Vite"],
+      "logo": "🔍",
       "featured": true
     },
     {
       "id": "2",
+      "title": "AI-Powered Exam Management Platform",
+      "description": "Full-stack examination and automation platform using React, Firebase Authentication, Telegram Bot API, and dashboard analytics to manage exams, students, and administrative workflows.",
+      "longDescription": "Built a comprehensive exam management system with automated notifications, exam operations, user management, and performance tracking through AI-driven features.",
+      "imageSrc": "https://images.unsplash.com/photo-1516534775068-bb57e39c1a29?w=800&h=600&fit=crop",
+      "url": "https://examplatformclient.vercel.app/login",
+      "github": "https://github.com/Abhishek-Gharat",
+      "tags": ["React", "Firebase", "Telegram Bot API", "Analytics"],
+      "logo": "📝",
+      "featured": true
+    },
+    {
+      "id": "3",
       "title": "Hotel Booking System",
       "description": "Full-stack hotel booking application with React frontend and Node.js backend. Features Express.js API and MongoDB for data storage.",
       "longDescription": "Developed a full-featured booking platform with React frontend, Express.js backend, and MongoDB database for storing booking data.",
@@ -169,17 +183,7 @@
       "url": "https://booking-react-app-one.vercel.app/",
       "github": "https://github.com/Abhishek-Gharat",
       "tags": ["React", "Node.js", "Express", "MongoDB"],
-      "featured": true
-    },
-    {
-      "id": "3",
-      "title": "Book Renting App",
-      "description": "Full CRUD book renting application built with React and Framer Motion for smooth animations and interactions.",
-      "longDescription": "Created a book renting application with full CRUD operations using React and Framer Motion for animations.",
-      "imageSrc": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=600&fit=crop",
-      "url": "https://note-app-qvjn.vercel.app/",
-      "github": "https://github.com/Abhishek-Gharat",
-      "tags": ["React", "Framer Motion", "CRUD"],
+      "logo": "🏨",
       "featured": true
     }
   ],
@@ -188,10 +192,11 @@
     "intro": "Frontend developer with experience building workflow automation tools, production-grade applications, and scalable user interfaces using React, Next.js, TypeScript, and modern frontend technologies.",
     "paragraphs": [
       "I specialize in building systems that think in flows. My experience includes developing interactive workflow diagrams using React Flow, building production-grade Next.js applications, and creating reusable component libraries.",
-      "At Hridayam Soft Solutions, I worked on a Collection System production project using Next.js and Ant Design, integrating REST APIs with Laravel backend and PostgreSQL database. I also developed reusable internal npm modules.",
-      "I completed a 6-month Full Stack Development Bootcamp through upGrad, and I hold a Master of Computer Applications degree from Chandigarh University with a CGPA of 7.48/10."
+      "At Hridayam Soft Solutions, I worked on the Collection System production project, integrating RESTful APIs with Laravel backend and building responsive interfaces using Next.js and Ant Design. I developed custom NPM packages and collaborated with backend teams on code reviews and version control using Git/GitHub.",
+      "Previously, I worked as a freelance Frontend Developer at Gnapika, building e-commerce platforms and integrating APIs with Flask and FastAPI backends. I also completed an internship at RCube Consulting, where I developed interactive diagrams using React Flow for business process visualization.",
+      "I hold a Master of Computer Applications degree from Chandigarh University (CGPA: 7.48/10) and a Bachelor of Science in Information Technology from Mumbai University."
     ],
-    "interests": ["Workflow Automation", "React Flow", "System Architecture", "UI/UX Design", "Web Performance"]
+    "interests": ["Workflow Automation", "React Flow", "System Architecture", "UI/UX Design", "Web Performance", "Interactive Diagrams"]
   },
   "resume": {
     "tagline": "Frontend Developer specializing in React Flow & Next.js",
@@ -202,30 +207,30 @@
         "dates": "Oct 2024 - May 2025",
         "type": "Full-time",
         "position": "Frontend Developer at Hridayam Soft Solutions",
-        "bullets": "Built frontend for Collection System production project using Next.js and Ant Design\nIntegrated REST APIs with Laravel backend and PostgreSQL\nDeveloped reusable internal npm modules\nCollaborated using Git/GitHub"
+        "bullets": "Worked on live Collection System production project\nIntegrated RESTful APIs with Laravel and PostgreSQL backend\nBuilt frontend using Next.js and Ant Design\nDeveloped and maintained custom NPM packages\nParticipated in code reviews and team collaboration"
       },
       {
         "id": "2",
         "dates": "Jul 2024 - Sep 2024",
         "type": "Freelance",
         "position": "Frontend Developer at Gnapika",
-        "bullets": "Built frontend for e-commerce platform\nIntegrated APIs with Flask and FastAPI backends\nDeveloped reusable frontend components"
+        "bullets": "Built frontend for e-commerce website\nIntegrated APIs with Flask and FastAPI backends\nDeveloped responsive and user-friendly interface\nEnhanced shopping experiences and user engagement"
       },
       {
         "id": "3",
         "dates": "Dec 2023 - Apr 2024",
         "type": "Internship",
         "position": "Software Developer Intern at RCube Consulting",
-        "bullets": "Developed interactive diagrams using React Flow\nVisualized business processes and workflows\nEnabled drag-and-connect node interactions"
+        "bullets": "Developed interactive diagrams using React Flow\nVisualized core business processes\nStreamlined reporting process\nEnabled drag-and-connect node interactions"
       }
     ],
     "education": {
       "universityName": "Chandigarh University",
       "universityDate": "Jul 2022 - Jul 2024",
-      "universityPara": "Master of Computer Applications in Information Technology (CGPA: 7.48/10)"
+      "universityPara": "Master in Computer Applications in Computer Applications (CGPA: 7.48/10)"
     },
     "languages": ["JavaScript", "TypeScript", "HTML5", "CSS3"],
     "frameworks": ["React", "Next.js", "React Flow", "Express", "Node.js"],
-    "others": ["Git", "GitHub", "Figma", "PostgreSQL", "MongoDB"]
+    "others": ["Git", "GitHub", "Figma", "PostgreSQL", "MongoDB", "Firebase", "React Native"]
   }
 }
