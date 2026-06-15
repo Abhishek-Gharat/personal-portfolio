@@ -91,18 +91,39 @@ const ProjectWorkflowNode = ({ project, index, isVisible }) => {
             </h3>
           </div>
 
-          {/* Project image */}
+          {/* Project visualization */}
           <div
-            className="relative aspect-video overflow-hidden border"
-            style={{ borderColor: '#1a1a2e' }}
+            className="relative aspect-video overflow-hidden border rounded-lg transition-all duration-500"
+            style={{
+              borderColor: isHovered ? color : '#1a1a2e',
+              background: `linear-gradient(135deg, ${color}15 0%, ${color}05 100%)`,
+              boxShadow: isHovered ? `inset 0 0 20px ${color}10` : 'none'
+            }}
           >
-            <img
-              src={project.imageSrc}
-              alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-500"
-              style={{ transform: isHovered ? 'scale(1.05)' : 'scale(1)' }}
+            {/* Grid pattern background */}
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: `linear-gradient(0deg, transparent 24%, ${color}40 25%, ${color}40 26%, transparent 27%, transparent 74%, ${color}40 75%, ${color}40 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, ${color}40 25%, ${color}40 26%, transparent 27%, transparent 74%, ${color}40 75%, ${color}40 76%, transparent 77%, transparent)`,
+                backgroundSize: '50px 50px'
+              }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a10] via-transparent to-transparent" />
+
+            {/* Center icon/label */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+              <div
+                className="text-4xl sm:text-5xl transition-transform duration-500"
+                style={{ transform: isHovered ? 'scale(1.2) rotate(12deg)' : 'scale(1)' }}
+              >
+                {project.logo}
+              </div>
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#8888aa]">
+                {project.featured ? 'Featured' : 'Project'}
+              </span>
+            </div>
+
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a10] via-transparent to-transparent opacity-60" />
           </div>
 
           {/* Description */}
