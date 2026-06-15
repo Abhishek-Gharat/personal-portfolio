@@ -314,7 +314,7 @@ const Skills = ({ skills }) => {
           </div>
 
           {/* Skill Groups */}
-          <div className={`grid lg:grid-cols-3 gap-8 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`grid lg:grid-cols-3 xl:grid-cols-4 gap-8 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className={activePath === 'frontend' ? 'scale-[1.02] transition-transform duration-500' : ''}>
               <SkillGroupNode
                 title="Frontend Systems"
@@ -337,6 +337,33 @@ const Skills = ({ skills }) => {
                 category="tools"
                 skills={skills.tools}
               />
+            </div>
+
+            {/* Summary Card - Visible on XL screens */}
+            <div className="hidden xl:flex">
+              <div className="relative border border-[#00ff88] bg-[#0a0a10] p-6 h-full flex flex-col justify-center items-center" style={{ boxShadow: '0 0 20px rgba(0, 255, 136, 0.1)' }}>
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]" />
+                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]" />
+                <div className="text-center space-y-4">
+                  <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#00ff88] mb-2">
+                    Proficiency
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#00ff88]" />
+                      <span className="text-xs text-[#8888aa]">Master</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#7c3aed]" />
+                      <span className="text-xs text-[#8888aa]">Advanced</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#f59e0b]" />
+                      <span className="text-xs text-[#8888aa]">Proficient</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
