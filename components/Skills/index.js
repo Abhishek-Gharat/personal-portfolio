@@ -306,15 +306,15 @@ const Skills = ({ skills }) => {
                   <polygon points="0 0, 10 3.5, 0 7" fill="#00ff88" />
                 </marker>
               </defs>
-              {/* Lines to each group */}
-              <line x1="50%" y1="0" x2="20%" y2="100%" stroke={activePath === 'frontend' ? '#00ff88' : '#1a1a2e'} strokeWidth={activePath === 'frontend' ? 2 : 1} markerEnd="url(#arrow-green)" strokeDasharray="5,5" className={activePath === 'frontend' ? 'animate-pulse' : ''} />
-              <line x1="50%" y1="0" x2="50%" y2="100%" stroke={activePath === 'backend' ? '#7c3aed' : '#1a1a2e'} strokeWidth={activePath === 'backend' ? 2 : 1} markerEnd="url(#arrow-green)" strokeDasharray="5,5" className={activePath === 'backend' ? 'animate-pulse' : ''} />
-              <line x1="50%" y1="0" x2="80%" y2="100%" stroke={activePath === 'tools' ? '#f59e0b' : '#1a1a2e'} strokeWidth={activePath === 'tools' ? 2 : 1} markerEnd="url(#arrow-green)" strokeDasharray="5,5" className={activePath === 'tools' ? 'animate-pulse' : ''} />
+              {/* Lines to each group - adjusted for better distribution */}
+              <line x1="50%" y1="0" x2="16.5%" y2="100%" stroke={activePath === 'frontend' ? '#00ff88' : '#1a1a2e'} strokeWidth={activePath === 'frontend' ? 2 : 1} markerEnd="url(#arrow-green)" strokeDasharray="5,5" className={activePath === 'frontend' ? 'animate-pulse' : ''} />
+              <line x1="50%" y1="0" x2="41.5%" y2="100%" stroke={activePath === 'backend' ? '#7c3aed' : '#1a1a2e'} strokeWidth={activePath === 'backend' ? 2 : 1} markerEnd="url(#arrow-green)" strokeDasharray="5,5" className={activePath === 'backend' ? 'animate-pulse' : ''} />
+              <line x1="50%" y1="0" x2="66.5%" y2="100%" stroke={activePath === 'tools' ? '#f59e0b' : '#1a1a2e'} strokeWidth={activePath === 'tools' ? 2 : 1} markerEnd="url(#arrow-green)" strokeDasharray="5,5" className={activePath === 'tools' ? 'animate-pulse' : ''} />
             </svg>
           </div>
 
           {/* Skill Groups */}
-          <div className={`grid lg:grid-cols-3 xl:grid-cols-4 gap-8 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className={activePath === 'frontend' ? 'scale-[1.02] transition-transform duration-500' : ''}>
               <SkillGroupNode
                 title="Frontend Systems"
@@ -322,7 +322,7 @@ const Skills = ({ skills }) => {
                 skills={skills.frontend}
               />
             </div>
-            
+
             <div className={activePath === 'backend' ? 'scale-[1.02] transition-transform duration-500' : ''}>
               <SkillGroupNode
                 title="Backend Infrastructure"
@@ -330,7 +330,7 @@ const Skills = ({ skills }) => {
                 skills={skills.backend}
               />
             </div>
-            
+
             <div className={activePath === 'tools' ? 'scale-[1.02] transition-transform duration-500' : ''}>
               <SkillGroupNode
                 title="Engineering Tools"
@@ -340,27 +340,37 @@ const Skills = ({ skills }) => {
             </div>
 
             {/* Summary Card - Visible on XL screens */}
-            <div className="hidden xl:flex">
-              <div className="relative border border-[#00ff88] bg-[#0a0a10] p-6 h-full flex flex-col justify-center items-center" style={{ boxShadow: '0 0 20px rgba(0, 255, 136, 0.1)' }}>
+            <div className="hidden xl:block">
+              <div className="relative border border-[#00ff88] bg-[#0a0a10] p-6 h-full flex flex-col justify-between" style={{ boxShadow: '0 0 20px rgba(0, 255, 136, 0.1)' }}>
                 <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]" />
                 <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]" />
-                <div className="text-center space-y-4">
-                  <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#00ff88] mb-2">
-                    Proficiency
+                <div className="absolute top-1/2 -left-1 -translate-y-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]" />
+                <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]" />
+
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#00ff88] mb-4">
+                    Legend
                   </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-[#00ff88]" />
-                      <span className="text-xs text-[#8888aa]">Master</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-[#7c3aed]" />
-                      <span className="text-xs text-[#8888aa]">Advanced</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-[#f59e0b]" />
-                      <span className="text-xs text-[#8888aa]">Proficient</span>
-                    </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full" style={{ background: '#00ff88' }} />
+                    <span className="text-xs text-[#8888aa]">Master Level</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full" style={{ background: '#7c3aed' }} />
+                    <span className="text-xs text-[#8888aa]">Advanced</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full" style={{ background: '#f59e0b' }} />
+                    <span className="text-xs text-[#8888aa]">Proficient</span>
+                  </div>
+                </div>
+
+                <div className="border-t border-[#1a1a2e] pt-3 mt-4 text-center">
+                  <div className="font-mono text-[9px] text-[#555570] uppercase tracking-wider">
+                    Proficiency Levels
                   </div>
                 </div>
               </div>

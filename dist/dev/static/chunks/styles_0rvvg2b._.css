@@ -1493,6 +1493,10 @@ img, video {
   padding-top: 1rem;
 }
 
+.pt-3 {
+  padding-top: .75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2481,6 +2485,10 @@ body {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -2507,6 +2515,10 @@ body {
 }
 
 @media (min-width: 1280px) {
+  .xl\:block {
+    display: block;
+  }
+
   .xl\:flex {
     display: flex;
   }
