@@ -2679,33 +2679,18 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex items-center gap-3",
-                                children: [
-                                    project.logo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-lg border-2 flex items-center justify-center text-2xl sm:text-3xl",
-                                        style: {
-                                            borderColor: color,
-                                            background: `${color}10`,
-                                            boxShadow: `0 0 15px ${color}15`
-                                        },
-                                        children: project.logo
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 75,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-condensed text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase transition-colors duration-300 break-words flex-1",
-                                        style: {
-                                            color: isHovered ? color : '#fff'
-                                        },
-                                        children: project.title
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 86,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "font-condensed text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase transition-colors duration-300 break-words flex-1",
+                                    style: {
+                                        color: isHovered ? color : '#fff'
+                                    },
+                                    children: project.title
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Projects/index.js",
+                                    lineNumber: 74,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
                                 fileName: "[project]/components/Projects/index.js",
                                 lineNumber: 73,
                                 columnNumber: 11
@@ -2726,7 +2711,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 104,
+                                        lineNumber: 92,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2749,7 +2734,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Projects/index.js",
-                                                    lineNumber: 119,
+                                                    lineNumber: 107,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2775,7 +2760,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Projects/index.js",
-                                                            lineNumber: 143,
+                                                            lineNumber: 131,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2790,7 +2775,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Projects/index.js",
-                                                            lineNumber: 154,
+                                                            lineNumber: 142,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         [
@@ -2821,37 +2806,37 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                                                 }
                                                             }, i, false, {
                                                                 fileName: "[project]/components/Projects/index.js",
-                                                                lineNumber: 172,
+                                                                lineNumber: 160,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/Projects/index.js",
-                                                    lineNumber: 131,
+                                                    lineNumber: 119,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Projects/index.js",
-                                            lineNumber: 114,
+                                            lineNumber: 102,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 113,
+                                        lineNumber: 101,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute inset-0 bg-gradient-to-t from-[#0a0a10] via-transparent to-transparent opacity-60"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 189,
+                                        lineNumber: 177,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 95,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2859,7 +2844,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                 children: project.description
                             }, void 0, false, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 193,
+                                lineNumber: 181,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2874,7 +2859,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                             children: tag
                                         }, tag, false, {
                                             fileName: "[project]/components/Projects/index.js",
-                                            lineNumber: 200,
+                                            lineNumber: 188,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))),
                                     project.tags && project.tags.length > 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2888,13 +2873,13 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 212,
+                                        lineNumber: 200,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 198,
+                                lineNumber: 186,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2918,7 +2903,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                                 children: "Live Demo"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Projects/index.js",
-                                                lineNumber: 235,
+                                                lineNumber: 223,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -2933,18 +2918,18 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                                     d: "M17 8l4 4m0 0l-4 4m4-4H3"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Projects/index.js",
-                                                    lineNumber: 237,
+                                                    lineNumber: 225,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Projects/index.js",
-                                                lineNumber: 236,
+                                                lineNumber: 224,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 224,
+                                        lineNumber: 212,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     project.github && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2962,7 +2947,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                                 children: "Source"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Projects/index.js",
-                                                lineNumber: 254,
+                                                lineNumber: 242,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -2975,24 +2960,24 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                                                     d: "M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Projects/index.js",
-                                                    lineNumber: 256,
+                                                    lineNumber: 244,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Projects/index.js",
-                                                lineNumber: 255,
+                                                lineNumber: 243,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 243,
+                                        lineNumber: 231,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 222,
+                                lineNumber: 210,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
@@ -3005,7 +2990,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                         className: "absolute -bottom-1 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#1a1a2e] border border-[#252540]"
                     }, void 0, false, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 264,
+                        lineNumber: 252,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -3018,7 +3003,7 @@ const ProjectWorkflowNode = ({ project, index, isVisible })=>{
                 className: "hidden lg:block absolute -bottom-8 left-1/2 w-px h-8 bg-gradient-to-b from-[#252540] to-[#1a1a2e]"
             }, void 0, false, {
                 fileName: "[project]/components/Projects/index.js",
-                lineNumber: 269,
+                lineNumber: 257,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
@@ -3048,24 +3033,24 @@ const ProjectWorkflow = ({ projects })=>{
                                 className: "w-2 h-2 bg-[#050508] rounded-full animate-pulse"
                             }, void 0, false, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 286,
+                                lineNumber: 274,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             "Projects Pipeline"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 285,
+                        lineNumber: 273,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/Projects/index.js",
-                    lineNumber: 284,
+                    lineNumber: 272,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Projects/index.js",
-                lineNumber: 283,
+                lineNumber: 271,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3076,17 +3061,17 @@ const ProjectWorkflow = ({ projects })=>{
                         className: "absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#1a1a2e]"
                     }, void 0, false, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 295,
+                        lineNumber: 283,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/Projects/index.js",
-                    lineNumber: 294,
+                    lineNumber: 282,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Projects/index.js",
-                lineNumber: 293,
+                lineNumber: 281,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3097,12 +3082,12 @@ const ProjectWorkflow = ({ projects })=>{
                         isVisible: true
                     }, project.id, false, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 302,
+                        lineNumber: 290,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/components/Projects/index.js",
-                lineNumber: 300,
+                lineNumber: 288,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             others.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -3116,14 +3101,14 @@ const ProjectWorkflow = ({ projects })=>{
                                     className: "w-px h-8 bg-[#1a1a2e]"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Projects/index.js",
-                                    lineNumber: 316,
+                                    lineNumber: 304,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "absolute top-8 left-1/2 -translate-x-1/2 w-20 sm:w-32 h-px bg-[#1a1a2e]"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Projects/index.js",
-                                    lineNumber: 317,
+                                    lineNumber: 305,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3131,18 +3116,18 @@ const ProjectWorkflow = ({ projects })=>{
                                     children: "Branch"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Projects/index.js",
-                                    lineNumber: 318,
+                                    lineNumber: 306,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Projects/index.js",
-                            lineNumber: 315,
+                            lineNumber: 303,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 314,
+                        lineNumber: 302,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3156,12 +3141,12 @@ const ProjectWorkflow = ({ projects })=>{
                                 isVisible: true
                             }, project.id, false, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 327,
+                                lineNumber: 315,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 325,
+                        lineNumber: 313,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -3177,30 +3162,30 @@ const ProjectWorkflow = ({ projects })=>{
                                 className: "w-2 h-2 rounded-full bg-[#00ff88]"
                             }, void 0, false, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 342,
+                                lineNumber: 330,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             "Production Ready"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 341,
+                        lineNumber: 329,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/Projects/index.js",
-                    lineNumber: 340,
+                    lineNumber: 328,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Projects/index.js",
-                lineNumber: 339,
+                lineNumber: 327,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Projects/index.js",
-        lineNumber: 281,
+        lineNumber: 269,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -3244,7 +3229,7 @@ const Projects = ({ projects })=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/components/Projects/index.js",
-                lineNumber: 379,
+                lineNumber: 367,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3260,20 +3245,20 @@ const Projects = ({ projects })=>{
                                         children: "02"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 396,
+                                        lineNumber: 384,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Deployed Systems"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 397,
+                                        lineNumber: 385,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 395,
+                                lineNumber: 383,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3282,7 +3267,7 @@ const Projects = ({ projects })=>{
                                     "System",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 400,
+                                        lineNumber: 388,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3290,13 +3275,13 @@ const Projects = ({ projects })=>{
                                         children: "Workflow"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 401,
+                                        lineNumber: 389,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 399,
+                                lineNumber: 387,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3304,13 +3289,13 @@ const Projects = ({ projects })=>{
                                 children: "A selection of production systems I've built, visualized as a workflow pipeline."
                             }, void 0, false, {
                                 fileName: "[project]/components/Projects/index.js",
-                                lineNumber: 403,
+                                lineNumber: 391,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 392,
+                        lineNumber: 380,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3319,12 +3304,12 @@ const Projects = ({ projects })=>{
                             projects: projects
                         }, void 0, false, {
                             fileName: "[project]/components/Projects/index.js",
-                            lineNumber: 410,
+                            lineNumber: 398,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 409,
+                        lineNumber: 397,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3339,7 +3324,7 @@ const Projects = ({ projects })=>{
                                     children: "View All Systems"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Projects/index.js",
-                                    lineNumber: 421,
+                                    lineNumber: 409,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -3354,35 +3339,35 @@ const Projects = ({ projects })=>{
                                         d: "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Projects/index.js",
-                                        lineNumber: 423,
+                                        lineNumber: 411,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/components/Projects/index.js",
-                                    lineNumber: 422,
+                                    lineNumber: 410,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Projects/index.js",
-                            lineNumber: 415,
+                            lineNumber: 403,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Projects/index.js",
-                        lineNumber: 414,
+                        lineNumber: 402,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Projects/index.js",
-                lineNumber: 390,
+                lineNumber: 378,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Projects/index.js",
-        lineNumber: 373,
+        lineNumber: 361,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

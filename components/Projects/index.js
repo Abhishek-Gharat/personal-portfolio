@@ -69,20 +69,8 @@ const ProjectWorkflowNode = ({ project, index, isVisible }) => {
 
         {/* Node content */}
         <div className="p-3 sm:p-4 md:p-6 space-y-4">
-          {/* Logo + Title Section */}
+          {/* Title Section */}
           <div className="flex items-center gap-3">
-            {project.logo && (
-              <div
-                className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-lg border-2 flex items-center justify-center text-2xl sm:text-3xl"
-                style={{
-                  borderColor: color,
-                  background: `${color}10`,
-                  boxShadow: `0 0 15px ${color}15`
-                }}
-              >
-                {project.logo}
-              </div>
-            )}
             <h3
               className="font-condensed text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase transition-colors duration-300 break-words flex-1"
               style={{ color: isHovered ? color : '#fff' }}
