@@ -96,22 +96,37 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-white"
+            className="md:hidden p-2 text-white min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg active:bg-white/10 transition-colors z-50"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            {mobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav className="md:hidden pb-4 space-y-2 border-t border-[#1a1a2e]">
+        {/* Mobile Navigation - Fixed overlay */}
+      {mobileMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          {/* Menu */}
+          <nav className="fixed top-16 left-0 right-0 z-50 md:hidden pb-4 space-y-2 border-t border-[#1a1a2e] bg-[#050508]/95 backdrop-blur-xl">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-4 py-3 font-mono text-xs tracking-[0.15em] uppercase transition-all duration-300 ${
+                className={`block w-full text-left px-4 py-4 font-mono text-sm tracking-[0.15em] uppercase transition-all duration-300 ${
                   activeSection === item.id
                     ? 'text-[#00ff88] bg-[#00ff88]/10'
                     : 'text-[#8888aa] hover:text-white hover:bg-[#1a1a2e]/50'
@@ -121,7 +136,8 @@ const Navigation = () => {
               </button>
             ))}
           </nav>
-        )}
+        </>
+      )}
       </div>
     </header>
   );

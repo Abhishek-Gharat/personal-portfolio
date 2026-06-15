@@ -19,18 +19,31 @@ const HeroGraph = () => {
     scene.background = new THREE.Color(0x080b14);
     sceneRef.current = scene;
 
+    // Get actual container dimensions for mobile compatibility
+    const getContainerDimensions = () => {
+      const container = mountRef.current;
+      if (!container) return { width: window.innerWidth, height: window.innerHeight };
+      const rect = container.getBoundingClientRect();
+      return { 
+        width: Math.min(rect.width, window.innerWidth), 
+        height: rect.height || window.innerHeight 
+      };
+    };
+
+    const dims = getContainerDimensions();
+
     // Camera
     const camera = new THREE.PerspectiveCamera(
       60,
-      window.innerWidth / window.innerHeight,
+      dims.width / dims.height,
       0.1,
       1000
     );
     camera.position.z = 5;
 
-    // Renderer
+    // Renderer - use container dimensions
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(dims.width, dims.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     mountRef.current.appendChild(renderer.domElement);
     rendererRef.current = renderer;
@@ -240,11 +253,12 @@ const HeroGraph = () => {
     mountRef.current.addEventListener('touchmove', onTouchMove, { passive: true });
     window.addEventListener('touchend', onTouchEnd);
 
-    // Handle resize
+    // Handle resize - use container dimensions for mobile
     const onWindowResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      const dims = getContainerDimensions();
+      camera.aspect = dims.width / dims.height;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(dims.width, dims.height);
     };
 
     window.addEventListener('resize', onWindowResize);
@@ -311,7 +325,12 @@ const HeroGraph = () => {
         inset: 0,
         zIndex: 0,
         userSelect: 'none',
-        WebkitUserSelect: 'none'
+        WebkitUserSelect: 'none',
+        overflow: 'hidden',
+        width: '100%',
+        height: '100%',
+        maxWidth: '100vw',
+        touchAction: 'pan-y pinch-zoom'
       }}
     />
   );

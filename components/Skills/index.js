@@ -118,9 +118,10 @@ const SkillNode = ({ skill, category, index }) => {
           border: `1px solid ${isHovered ? color : '#1a1a2e'}`,
           borderLeft: `3px solid ${color}`,
           padding: '10px 12px',
-          minWidth: '120px',
-          maxWidth: '160px',
+          minWidth: '100%',
+          maxWidth: '100%',
           boxSizing: 'border-box',
+          width: '100%',
         }}
       >
         {/* Header row - constrained within node */}
@@ -193,11 +194,11 @@ const SkillGroupNode = ({ title, category, skills, children }) => {
           >
             {title}
           </h3>
-          <div className="flex-1 h-px bg-[#1a1a2e] min-w-[20px]" />
+          <div className="flex-1 h-px bg-[#1a1a2e] min-w-[12px] sm:min-w-[20px]" />
         </div>
 
         {/* Skills grid - responsive within container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-2">
           {skills.map((skill, index) => (
             <div key={skill.name} className="min-w-0">
               <SkillNode skill={skill} category={category} index={index} />
@@ -251,7 +252,7 @@ const Skills = ({ skills }) => {
     <section
       id="skills"
       ref={sectionRef}
-      className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+      className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-x-hidden"
     >
       {/* Background workflow grid */}
       <div 
@@ -298,23 +299,23 @@ const Skills = ({ skills }) => {
             </WorkflowNode>
           </div>
 
-          {/* Connection lines to skill groups */}
-          <div className="hidden lg:block absolute top-16 left-1/2 w-full -translate-x-1/2 h-20 pointer-events-none">
-            <svg width="100%" height="100%" className="overflow-visible" style={{ opacity: revealed ? 1 : 0, transition: 'opacity 0.5s' }}>
+          {/* Connection lines to skill groups - hidden on mobile/tablet */}
+          <div className="hidden lg:block absolute top-16 left-1/2 w-full max-w-4xl xl:max-w-6xl -translate-x-1/2 h-20 pointer-events-none overflow-hidden">
+            <svg width="100%" height="100%" className="overflow-hidden" style={{ opacity: revealed ? 1 : 0, transition: 'opacity 0.5s' }}>
               <defs>
-                <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                  <polygon points="0 0, 10 3.5, 0 7" fill="#00ff88" />
+                <marker id="arrow-green-skills" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                  <polygon points="0 0, 8 3, 0 6" fill="#00ff88" />
                 </marker>
               </defs>
-              {/* Lines to each group */}
-              <line x1="50%" y1="0" x2="20%" y2="100%" stroke={activePath === 'frontend' ? '#00ff88' : '#1a1a2e'} strokeWidth={activePath === 'frontend' ? 2 : 1} markerEnd="url(#arrow-green)" strokeDasharray="5,5" className={activePath === 'frontend' ? 'animate-pulse' : ''} />
-              <line x1="50%" y1="0" x2="50%" y2="100%" stroke={activePath === 'backend' ? '#7c3aed' : '#1a1a2e'} strokeWidth={activePath === 'backend' ? 2 : 1} markerEnd="url(#arrow-green)" strokeDasharray="5,5" className={activePath === 'backend' ? 'animate-pulse' : ''} />
-              <line x1="50%" y1="0" x2="80%" y2="100%" stroke={activePath === 'tools' ? '#f59e0b' : '#1a1a2e'} strokeWidth={activePath === 'tools' ? 2 : 1} markerEnd="url(#arrow-green)" strokeDasharray="5,5" className={activePath === 'tools' ? 'animate-pulse' : ''} />
+              {/* Lines to each group - constrained to prevent overflow */}
+              <line x1="50%" y1="0" x2="25%" y2="100%" stroke={activePath === 'frontend' ? '#00ff88' : '#1a1a2e'} strokeWidth={activePath === 'frontend' ? 2 : 1} markerEnd="url(#arrow-green-skills)" strokeDasharray="5,5" className={activePath === 'frontend' ? 'animate-pulse' : ''} />
+              <line x1="50%" y1="0" x2="50%" y2="100%" stroke={activePath === 'backend' ? '#7c3aed' : '#1a1a2e'} strokeWidth={activePath === 'backend' ? 2 : 1} markerEnd="url(#arrow-green-skills)" strokeDasharray="5,5" className={activePath === 'backend' ? 'animate-pulse' : ''} />
+              <line x1="50%" y1="0" x2="75%" y2="100%" stroke={activePath === 'tools' ? '#f59e0b' : '#1a1a2e'} strokeWidth={activePath === 'tools' ? 2 : 1} markerEnd="url(#arrow-green-skills)" strokeDasharray="5,5" className={activePath === 'tools' ? 'animate-pulse' : ''} />
             </svg>
           </div>
 
           {/* Skill Groups */}
-          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className={activePath === 'frontend' ? 'scale-[1.02] transition-transform duration-500' : ''}>
               <SkillGroupNode
                 title="Frontend Systems"
@@ -343,25 +344,25 @@ const Skills = ({ skills }) => {
           {/* Output node */}
           <div className={`flex justify-center mt-12 transition-all duration-700 delay-500 ${revealed ? 'opacity-100' : 'opacity-0'}`}>
             <div className="flex items-center gap-4">
-              <div className="hidden lg:block w-24 h-px bg-gradient-to-r from-transparent to-[#00ff88]" />
+              <div className="hidden lg:block w-16 xl:w-24 h-px bg-gradient-to-r from-transparent to-[#00ff88]" />
               <WorkflowNode
                 style={{
                   background: '#0f0f18',
                   border: '1px solid #00ff88',
                   borderRadius: '50%',
-                  width: '80px',
-                  height: '80px',
+                  width: '72px',
+                  height: '72px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   boxShadow: '0 0 30px rgba(0, 255, 136, 0.2)',
                 }}
               >
-                <span className="font-mono text-xs text-[#00ff88] uppercase text-center leading-tight">
+                <span className="font-mono text-[10px] sm:text-xs text-[#00ff88] uppercase text-center leading-tight">
                   Full<br/>Stack
                 </span>
               </WorkflowNode>
-              <div className="hidden lg:block w-24 h-px bg-gradient-to-l from-transparent to-[#00ff88]" />
+              <div className="hidden lg:block w-16 xl:w-24 h-px bg-gradient-to-l from-transparent to-[#00ff88]" />
             </div>
           </div>
         </div>

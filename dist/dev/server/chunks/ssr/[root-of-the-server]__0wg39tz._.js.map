@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ASUS/updatedport/personal-portfolio/pages/_app.js"],"sourcesContent":["// pages/_app.js\r\nimport { ThemeProvider } from 'next-themes';\r\nimport '../styles/globals.css';\r\n\r\nfunction MyApp({ Component, pageProps }) {\r\n  return (\r\n    <ThemeProvider attribute=\"class\" defaultTheme=\"light\">\r\n      <Component {...pageProps} />\r\n    </ThemeProvider>\r\n  );\r\n}\r\n\r\nexport default MyApp;\r\n"],"names":["MyApp","Component","pageProps","attribute","defaultTheme"],"mappings":";;;;;AAAA,gBAAgB;AAChB;;;;AAGA,SAASA,MAAM,EAAEC,SAAS,EAAEC,SAAS,EAAE;IACrC,qBACE,qKAAC,2LAAa;QAACC,WAAU;QAAQC,cAAa;kBAC5C,cAAA,qKAACH;YAAW,GAAGC,SAAS;;;;;;;;;;;AAG9B;uCAEeF"}}]
-}

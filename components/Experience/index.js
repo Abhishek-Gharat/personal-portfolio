@@ -237,7 +237,7 @@ const Experience = ({ experience, education }) => {
     <section
       id="experience"
       ref={sectionRef}
-      className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+      className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-x-hidden"
     >
       {/* Background process grid */}
       <div 

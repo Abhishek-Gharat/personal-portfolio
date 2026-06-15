@@ -37,7 +37,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
 
-      <div className="min-h-screen bg-[#050508] text-[#e8e8f0] overflow-x-hidden">
+      <div className="min-h-screen bg-[#050508] text-[#e8e8f0] overflow-x-hidden w-full max-w-full">
         <Navigation />
         
         <main>

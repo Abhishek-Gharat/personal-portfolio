@@ -11,7 +11,8 @@ const ParticleField = () => {
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    let width = window.innerWidth;
+    // Use documentElement.clientWidth to avoid scrollbar width issues on mobile
+    let width = Math.min(window.innerWidth, document.documentElement.clientWidth || window.innerWidth);
     let height = window.innerHeight;
     
     canvas.width = width;
@@ -73,7 +74,7 @@ const ParticleField = () => {
     animate();
 
     const handleResize = () => {
-      width = window.innerWidth;
+      width = Math.min(window.innerWidth, document.documentElement.clientWidth || window.innerWidth);
       height = window.innerHeight;
       canvas.width = width;
       canvas.height = height;
@@ -91,7 +92,7 @@ const ParticleField = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 z-0 pointer-events-none"
-      style={{ opacity: 0.6 }}
+      style={{ opacity: 0.6, maxWidth: '100vw', width: '100%', height: '100%' }}
     />
   );
 };
@@ -118,7 +119,7 @@ const Hero = ({ data }) => {
     <section
       ref={heroRef}
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-x-hidden overflow-y-visible"
       style={{ backgroundColor: '#080b14' }}
     >
       {/* Three.js Hero Graph */}
@@ -154,15 +155,15 @@ const Hero = ({ data }) => {
         </div>
 
         {/* Main Name */}
-        <div className="mb-6">
+        <div className="mb-6 overflow-hidden">
           <h1
-            className={`font-condensed font-black text-[clamp(4rem,12vw,10rem)] leading-[0.85] tracking-[-0.02em] uppercase transition-all duration-700 delay-100 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`font-condensed font-black text-[clamp(2.5rem,10vw,10rem)] leading-[0.85] tracking-[-0.02em] uppercase transition-all duration-700 delay-100 break-words ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ textShadow: '0 2px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.6)' }}
           >
             {data.name}
           </h1>
           <h1
-            className={`font-condensed font-black text-[clamp(4rem,12vw,10rem)] leading-[0.85] tracking-[-0.02em] uppercase text-[#00ff88] transition-all duration-700 delay-200 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`font-condensed font-black text-[clamp(2.5rem,10vw,10rem)] leading-[0.85] tracking-[-0.02em] uppercase text-[#00ff88] transition-all duration-700 delay-200 break-words ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ textShadow: '0 2px 20px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 255, 136, 0.2)' }}
           >
             {data.surname}
@@ -171,7 +172,7 @@ const Hero = ({ data }) => {
 
         {/* Subtitle - Updated from resume */}
         <p
-          className={`font-condensed text-[clamp(1.2rem,3vw,2rem)] font-light text-[#00ff88] tracking-[0.05em] uppercase mb-4 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          className={`font-condensed text-[clamp(1rem,2.5vw,2rem)] font-light text-[#00ff88] tracking-[0.05em] uppercase mb-4 transition-all duration-700 delay-300 break-words ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           style={{ textShadow: '0 2px 16px rgba(0, 0, 0, 0.8)' }}
         >
           {data.subheadline}
@@ -187,12 +188,12 @@ const Hero = ({ data }) => {
 
         {/* Stats Row - Updated from resume */}
         <div 
-          className={`flex flex-wrap gap-8 mb-12 transition-all duration-700 delay-400 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          className={`grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-8 mb-12 transition-all duration-700 delay-400 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           {data.hero?.stats?.map((stat, index) => (
-            <div key={index} className="flex items-center gap-4">
+            <div key={index} className="flex items-center gap-2 sm:gap-4">
               <div className="flex flex-col">
-                <span className="font-condensed text-3xl md:text-4xl font-bold text-white">
+                <span className="font-condensed text-2xl sm:text-3xl md:text-4xl font-bold text-white">
                   {stat.num}
                 </span>
                 <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-[#555570]">
@@ -200,7 +201,7 @@ const Hero = ({ data }) => {
                 </span>
               </div>
               {index < data.hero.stats.length - 1 && (
-                <div className="w-px h-12 bg-[#1a1a2e] hidden md:block" />
+                <div className="w-px h-12 bg-[#1a1a2e] hidden sm:block" />
               )}
             </div>
           ))}
@@ -208,17 +209,17 @@ const Hero = ({ data }) => {
 
         {/* CTAs */}
         <div 
-          className={`flex flex-wrap gap-4 mb-16 transition-all duration-700 delay-500 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          className={`flex flex-col sm:flex-row flex-wrap gap-4 mb-16 transition-all duration-700 delay-500 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <button
             onClick={() => scrollToSection('projects')}
-            className="group px-8 py-4 bg-[#00ff88] text-[#050508] font-mono text-sm tracking-[0.1em] uppercase font-bold transition-all duration-300 hover:bg-transparent hover:text-[#00ff88] border-2 border-[#00ff88]"
+            className="group px-6 sm:px-8 py-4 bg-[#00ff88] text-[#050508] font-mono text-sm tracking-[0.1em] uppercase font-bold transition-all duration-300 hover:bg-transparent hover:text-[#00ff88] border-2 border-[#00ff88] text-center"
           >
             View Systems →
           </button>
           <button
             onClick={() => scrollToSection('contact')}
-            className="group px-8 py-4 border-2 border-[#252540] text-white font-mono text-sm tracking-[0.1em] uppercase font-bold transition-all duration-300 hover:border-[#00ff88] hover:text-[#00ff88]"
+            className="group px-6 sm:px-8 py-4 border-2 border-[#252540] text-white font-mono text-sm tracking-[0.1em] uppercase font-bold transition-all duration-300 hover:border-[#00ff88] hover:text-[#00ff88] text-center"
           >
             Initialize Connection
           </button>
@@ -235,24 +236,24 @@ const Hero = ({ data }) => {
             </span>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {previewProjects.map((project, index) => (
               <button
                 key={project.id}
                 onClick={() => scrollToSection('projects')}
-                className="group text-left p-4 border border-[#1a1a2e] bg-[#0a0a10] transition-all duration-300 hover:border-[#00ff88] hover:bg-[#0f0f18]"
+                className="group text-left p-3 sm:p-4 border border-[#1a1a2e] bg-[#0a0a10] transition-all duration-300 hover:border-[#00ff88] hover:bg-[#0f0f18] w-full"
               >
-                <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-[#00ff88] mb-2">
+                <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.15em] uppercase text-[#00ff88] mb-2">
                   SYS_0{index + 1}
                 </div>
-                <h3 className="font-condensed text-lg font-semibold uppercase mb-2 group-hover:text-[#00ff88] transition-colors">
+                <h3 className="font-condensed text-base sm:text-lg font-semibold uppercase mb-2 group-hover:text-[#00ff88] transition-colors break-words">
                   {project.title}
                 </h3>
                 <div className="flex flex-wrap gap-1">
                   {project.tags?.slice(0, 2).map((tag) => (
                     <span 
                       key={tag}
-                      className="font-mono text-[9px] tracking-[0.1em] uppercase text-[#555570] border border-[#1a1a2e] px-2 py-1"
+                      className="font-mono text-[8px] sm:text-[9px] tracking-[0.1em] uppercase text-[#555570] border border-[#1a1a2e] px-2 py-1"
                     >
                       {tag}
                     </span>
@@ -265,9 +266,9 @@ const Hero = ({ data }) => {
       </div>
 
       {/* Scroll Hint */}
-      <div className="absolute bottom-8 left-8 flex items-center gap-3 text-[#555570]">
-        <span className="font-mono text-xs tracking-[0.2em] uppercase">Explore Universe</span>
-        <div className="w-16 h-px bg-[#555570] relative overflow-hidden">
+      <div className="absolute bottom-8 left-4 sm:left-8 flex items-center gap-2 sm:gap-3 text-[#555570]">
+        <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase">Explore</span>
+        <div className="w-8 sm:w-16 h-px bg-[#555570] relative overflow-hidden">
           <div 
             className="absolute inset-0 bg-[#00ff88]"
             style={{

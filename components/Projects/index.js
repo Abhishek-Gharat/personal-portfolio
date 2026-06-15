@@ -68,11 +68,11 @@ const ProjectWorkflowNode = ({ project, index, isVisible }) => {
         </div>
 
         {/* Node content */}
-        <div className="p-3 sm:p-4 md:p-6 space-y-4">
+        <div className="p-3 sm:p-4 md:p-6 space-y-4 overflow-hidden">
           {/* Title Section */}
           <div className="flex items-center gap-3">
             <h3
-              className="font-condensed text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase transition-colors duration-300 break-words flex-1"
+              className="font-condensed text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase transition-colors duration-300 break-words flex-1 min-w-0"
               style={{ color: isHovered ? color : '#fff' }}
             >
               {project.title}
@@ -183,11 +183,11 @@ const ProjectWorkflowNode = ({ project, index, isVisible }) => {
           </p>
 
           {/* Tech stack */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
             {project.tags?.slice(0, 4).map((tag) => (
               <span
                 key={tag}
-                className="font-mono text-[7px] sm:text-[8px] border px-2 py-1 transition-all duration-300 whitespace-nowrap"
+                className="font-mono text-[6px] sm:text-[8px] border px-1.5 sm:px-2 py-0.5 sm:py-1 transition-all duration-300 whitespace-nowrap"
                 style={{
                   borderColor: isHovered ? color : '#1a1a2e',
                   color: isHovered ? color : '#8888aa',
@@ -361,7 +361,7 @@ const Projects = ({ projects }) => {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8"
+      className="relative min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 overflow-x-hidden"
     >
       {/* Background grid */}
       <div

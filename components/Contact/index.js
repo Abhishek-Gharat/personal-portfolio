@@ -143,7 +143,7 @@ const Contact = ({ data }) => {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center"
+      className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center overflow-x-hidden"
     >
       {/* Background workflow grid */}
       <div 
@@ -168,7 +168,7 @@ const Contact = ({ data }) => {
           </div>
           
           <h2 
-            className={`font-condensed text-[clamp(3rem,10vw,7rem)] font-black leading-[0.9] tracking-[-0.02em] uppercase mb-6 transition-all duration-700 delay-100 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`font-condensed text-[clamp(2.5rem,8vw,7rem)] font-black leading-[0.9] tracking-[-0.02em] uppercase mb-6 transition-all duration-700 delay-100 break-words ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             Let's<br />
             <span className="text-[#00ff88]">Connect</span>
@@ -210,7 +210,7 @@ const Contact = ({ data }) => {
           </div>
 
           {/* Connection nodes */}
-          <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 transition-all duration-700 delay-500 ${revealed ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={`grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-16 transition-all duration-700 delay-500 ${revealed ? 'opacity-100' : 'opacity-0'}`}>
             {[
               { title: 'Email', link: `mailto:${data.email}`, color: '#00ff88' },
               ...socials
