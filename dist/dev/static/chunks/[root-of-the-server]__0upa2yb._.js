@@ -1533,6 +1533,7 @@ const Navigation = ()=>{
     _s();
     const [isScrolled, setIsScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [activeSection, setActiveSection] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('hero');
+    const [mobileMenuOpen, setMobileMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navigation.useEffect": ()=>{
             const handleScroll = {
@@ -1570,6 +1571,7 @@ const Navigation = ()=>{
             element.scrollIntoView({
                 behavior: 'smooth'
             });
+            setMobileMenuOpen(false);
         }
     };
     const navItems = [
@@ -1594,129 +1596,148 @@ const Navigation = ()=>{
         className: `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-[#050508]/90 backdrop-blur-xl border-b border-[#1a1a2e]' : 'bg-transparent'}`,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center justify-between h-16 md:h-20",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>scrollToSection('hero'),
-                        className: "group flex items-center gap-2",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "font-condensed text-2xl font-bold text-white",
-                                children: "AG"
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-center justify-between h-16 md:h-20",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: ()=>scrollToSection('hero'),
+                            className: "group flex items-center gap-2",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-condensed text-2xl font-bold text-white",
+                                    children: "AG"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navigation/index.js",
+                                    lineNumber: 60,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-mono text-[10px] tracking-[0.2em] uppercase text-[#00ff88]",
+                                    children: ".NETWORK"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navigation/index.js",
+                                    lineNumber: 63,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Navigation/index.js",
+                            lineNumber: 56,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                            className: "hidden md:flex items-center gap-1",
+                            children: navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>scrollToSection(item.id),
+                                    className: `relative px-4 py-2 font-mono text-xs tracking-[0.15em] uppercase transition-all duration-300 ${activeSection === item.id ? 'text-[#00ff88]' : 'text-[#8888aa] hover:text-white'}`,
+                                    children: [
+                                        item.label,
+                                        activeSection === item.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#00ff88] rounded-full"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navigation/index.js",
+                                            lineNumber: 82,
+                                            columnNumber: 19
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, item.id, true, {
+                                    fileName: "[project]/components/Navigation/index.js",
+                                    lineNumber: 71,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)))
+                        }, void 0, false, {
+                            fileName: "[project]/components/Navigation/index.js",
+                            lineNumber: 69,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "hidden sm:flex items-center gap-2",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "w-2 h-2 bg-[#00ff88] rounded-full animate-pulse"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navigation/index.js",
+                                    lineNumber: 90,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-mono text-[10px] tracking-[0.15em] uppercase text-[#8888aa]",
+                                    children: "Online"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navigation/index.js",
+                                    lineNumber: 91,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Navigation/index.js",
+                            lineNumber: 89,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: ()=>setMobileMenuOpen(!mobileMenuOpen),
+                            className: "md:hidden p-2 text-white",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                className: "w-6 h-6",
+                                fill: "none",
+                                stroke: "currentColor",
+                                viewBox: "0 0 24 24",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    strokeWidth: 1.5,
+                                    d: "M4 6h16M4 12h16M4 18h16"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navigation/index.js",
+                                    lineNumber: 102,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/components/Navigation/index.js",
-                                lineNumber: 58,
+                                lineNumber: 101,
                                 columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "font-mono text-[10px] tracking-[0.2em] uppercase text-[#00ff88]",
-                                children: ".NETWORK"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Navigation/index.js",
-                                lineNumber: 61,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/Navigation/index.js",
-                        lineNumber: 54,
-                        columnNumber: 11
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-                        className: "hidden md:flex items-center gap-1",
-                        children: navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>scrollToSection(item.id),
-                                className: `relative px-4 py-2 font-mono text-xs tracking-[0.15em] uppercase transition-all duration-300 ${activeSection === item.id ? 'text-[#00ff88]' : 'text-[#8888aa] hover:text-white'}`,
-                                children: [
-                                    item.label,
-                                    activeSection === item.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#00ff88] rounded-full"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navigation/index.js",
-                                        lineNumber: 80,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, item.id, true, {
-                                fileName: "[project]/components/Navigation/index.js",
-                                lineNumber: 69,
-                                columnNumber: 15
-                            }, ("TURBOPACK compile-time value", void 0)))
-                    }, void 0, false, {
-                        fileName: "[project]/components/Navigation/index.js",
-                        lineNumber: 67,
-                        columnNumber: 11
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hidden sm:flex items-center gap-2",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "w-2 h-2 bg-[#00ff88] rounded-full animate-pulse"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Navigation/index.js",
-                                lineNumber: 88,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "font-mono text-[10px] tracking-[0.15em] uppercase text-[#8888aa]",
-                                children: "Online"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Navigation/index.js",
-                                lineNumber: 89,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/Navigation/index.js",
-                        lineNumber: 87,
-                        columnNumber: 11
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "md:hidden p-2 text-white",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                            className: "w-6 h-6",
-                            fill: "none",
-                            stroke: "currentColor",
-                            viewBox: "0 0 24 24",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
-                                strokeWidth: 1.5,
-                                d: "M4 6h16M4 12h16M4 18h16"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Navigation/index.js",
-                                lineNumber: 97,
-                                columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/components/Navigation/index.js",
-                            lineNumber: 96,
-                            columnNumber: 13
+                            lineNumber: 97,
+                            columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
-                    }, void 0, false, {
-                        fileName: "[project]/components/Navigation/index.js",
-                        lineNumber: 95,
-                        columnNumber: 11
-                    }, ("TURBOPACK compile-time value", void 0))
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/Navigation/index.js",
-                lineNumber: 52,
-                columnNumber: 9
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/Navigation/index.js",
+                    lineNumber: 54,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                mobileMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                    className: "md:hidden pb-4 space-y-2 border-t border-[#1a1a2e]",
+                    children: navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: ()=>scrollToSection(item.id),
+                            className: `block w-full text-left px-4 py-3 font-mono text-xs tracking-[0.15em] uppercase transition-all duration-300 ${activeSection === item.id ? 'text-[#00ff88] bg-[#00ff88]/10' : 'text-[#8888aa] hover:text-white hover:bg-[#1a1a2e]/50'}`,
+                            children: item.label
+                        }, item.id, false, {
+                            fileName: "[project]/components/Navigation/index.js",
+                            lineNumber: 111,
+                            columnNumber: 15
+                        }, ("TURBOPACK compile-time value", void 0)))
+                }, void 0, false, {
+                    fileName: "[project]/components/Navigation/index.js",
+                    lineNumber: 109,
+                    columnNumber: 11
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
             fileName: "[project]/components/Navigation/index.js",
-            lineNumber: 51,
+            lineNumber: 53,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/Navigation/index.js",
-        lineNumber: 44,
+        lineNumber: 46,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(Navigation, "/FX37+HjEyoVlCkzGrpP0PXr8Lc=");
+_s(Navigation, "0XAgIyLeSoOgdTT+0VCoMxedv+o=");
 _c = Navigation;
 const __TURBOPACK__default__export__ = Navigation;
 var _c;
@@ -2287,7 +2308,7 @@ const Skills = ({ skills })=>{
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
                                             x1: "50%",
                                             y1: "0",
-                                            x2: "16.5%",
+                                            x2: "20%",
                                             y2: "100%",
                                             stroke: activePath === 'frontend' ? '#00ff88' : '#1a1a2e',
                                             strokeWidth: activePath === 'frontend' ? 2 : 1,
@@ -2302,7 +2323,7 @@ const Skills = ({ skills })=>{
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
                                             x1: "50%",
                                             y1: "0",
-                                            x2: "41.5%",
+                                            x2: "50%",
                                             y2: "100%",
                                             stroke: activePath === 'backend' ? '#7c3aed' : '#1a1a2e',
                                             strokeWidth: activePath === 'backend' ? 2 : 1,
@@ -2317,7 +2338,7 @@ const Skills = ({ skills })=>{
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
                                             x1: "50%",
                                             y1: "0",
-                                            x2: "66.5%",
+                                            x2: "80%",
                                             y2: "100%",
                                             stroke: activePath === 'tools' ? '#f59e0b' : '#1a1a2e',
                                             strokeWidth: activePath === 'tools' ? 2 : 1,
@@ -2341,7 +2362,7 @@ const Skills = ({ skills })=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`,
+                                className: `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 transition-all duration-700 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: activePath === 'frontend' ? 'scale-[1.02] transition-transform duration-500' : '',
@@ -2390,172 +2411,6 @@ const Skills = ({ skills })=>{
                                         fileName: "[project]/components/Skills/index.js",
                                         lineNumber: 334,
                                         columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "hidden xl:block",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "relative border border-[#00ff88] bg-[#0a0a10] p-6 h-full flex flex-col justify-between",
-                                            style: {
-                                                boxShadow: '0 0 20px rgba(0, 255, 136, 0.1)'
-                                            },
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/Skills/index.js",
-                                                    lineNumber: 345,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/Skills/index.js",
-                                                    lineNumber: 346,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute top-1/2 -left-1 -translate-y-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/Skills/index.js",
-                                                    lineNumber: 347,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 rounded-full bg-[#1a1a2e] border border-[#252540]"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/Skills/index.js",
-                                                    lineNumber: 348,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "font-mono text-[10px] uppercase tracking-[0.15em] text-[#00ff88] mb-4",
-                                                        children: "Legend"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/Skills/index.js",
-                                                        lineNumber: 351,
-                                                        columnNumber: 19
-                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/Skills/index.js",
-                                                    lineNumber: 350,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "space-y-3",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex items-center gap-2",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "w-2 h-2 rounded-full",
-                                                                    style: {
-                                                                        background: '#00ff88'
-                                                                    }
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/components/Skills/index.js",
-                                                                    lineNumber: 358,
-                                                                    columnNumber: 21
-                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "text-xs text-[#8888aa]",
-                                                                    children: "Master Level"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/components/Skills/index.js",
-                                                                    lineNumber: 359,
-                                                                    columnNumber: 21
-                                                                }, ("TURBOPACK compile-time value", void 0))
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/components/Skills/index.js",
-                                                            lineNumber: 357,
-                                                            columnNumber: 19
-                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex items-center gap-2",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "w-2 h-2 rounded-full",
-                                                                    style: {
-                                                                        background: '#7c3aed'
-                                                                    }
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/components/Skills/index.js",
-                                                                    lineNumber: 362,
-                                                                    columnNumber: 21
-                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "text-xs text-[#8888aa]",
-                                                                    children: "Advanced"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/components/Skills/index.js",
-                                                                    lineNumber: 363,
-                                                                    columnNumber: 21
-                                                                }, ("TURBOPACK compile-time value", void 0))
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/components/Skills/index.js",
-                                                            lineNumber: 361,
-                                                            columnNumber: 19
-                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex items-center gap-2",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "w-2 h-2 rounded-full",
-                                                                    style: {
-                                                                        background: '#f59e0b'
-                                                                    }
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/components/Skills/index.js",
-                                                                    lineNumber: 366,
-                                                                    columnNumber: 21
-                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "text-xs text-[#8888aa]",
-                                                                    children: "Proficient"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/components/Skills/index.js",
-                                                                    lineNumber: 367,
-                                                                    columnNumber: 21
-                                                                }, ("TURBOPACK compile-time value", void 0))
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/components/Skills/index.js",
-                                                            lineNumber: 365,
-                                                            columnNumber: 19
-                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/components/Skills/index.js",
-                                                    lineNumber: 356,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "border-t border-[#1a1a2e] pt-3 mt-4 text-center",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "font-mono text-[9px] text-[#555570] uppercase tracking-wider",
-                                                        children: "Proficiency Levels"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/Skills/index.js",
-                                                        lineNumber: 372,
-                                                        columnNumber: 19
-                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/Skills/index.js",
-                                                    lineNumber: 371,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/components/Skills/index.js",
-                                            lineNumber: 344,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Skills/index.js",
-                                        lineNumber: 343,
-                                        columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
@@ -2572,7 +2427,7 @@ const Skills = ({ skills })=>{
                                             className: "hidden lg:block w-24 h-px bg-gradient-to-r from-transparent to-[#00ff88]"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Skills/index.js",
-                                            lineNumber: 383,
+                                            lineNumber: 346,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(WorkflowNode, {
@@ -2593,37 +2448,37 @@ const Skills = ({ skills })=>{
                                                     "Full",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/components/Skills/index.js",
-                                                        lineNumber: 398,
+                                                        lineNumber: 361,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     "Stack"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Skills/index.js",
-                                                lineNumber: 397,
+                                                lineNumber: 360,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/components/Skills/index.js",
-                                            lineNumber: 384,
+                                            lineNumber: 347,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "hidden lg:block w-24 h-px bg-gradient-to-l from-transparent to-[#00ff88]"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Skills/index.js",
-                                            lineNumber: 401,
+                                            lineNumber: 364,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Skills/index.js",
-                                    lineNumber: 382,
+                                    lineNumber: 345,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/components/Skills/index.js",
-                                lineNumber: 381,
+                                lineNumber: 344,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
@@ -2661,7 +2516,7 @@ const Skills = ({ skills })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/components/Skills/index.js",
-                                        lineNumber: 414,
+                                        lineNumber: 377,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2669,18 +2524,18 @@ const Skills = ({ skills })=>{
                                         children: item.label
                                     }, void 0, false, {
                                         fileName: "[project]/components/Skills/index.js",
-                                        lineNumber: 421,
+                                        lineNumber: 384,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, item.label, true, {
                                 fileName: "[project]/components/Skills/index.js",
-                                lineNumber: 413,
+                                lineNumber: 376,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/components/Skills/index.js",
-                        lineNumber: 407,
+                        lineNumber: 370,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]

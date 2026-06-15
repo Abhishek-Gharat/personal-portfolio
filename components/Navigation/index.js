@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
+
       // Determine active section
       const sections = ['hero', 'skills', 'projects', 'experience', 'contact'];
       for (const section of sections) {
@@ -30,6 +31,7 @@ const Navigation = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false);
     }
   };
 
@@ -43,15 +45,15 @@ const Navigation = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-[#050508]/90 backdrop-blur-xl border-b border-[#1a1a2e]' 
+        isScrolled
+          ? 'bg-[#050508]/90 backdrop-blur-xl border-b border-[#1a1a2e]'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <button 
+          <button
             onClick={() => scrollToSection('hero')}
             className="group flex items-center gap-2"
           >
@@ -92,12 +94,34 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 text-white">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-white"
+          >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <nav className="md:hidden pb-4 space-y-2 border-t border-[#1a1a2e]">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`block w-full text-left px-4 py-3 font-mono text-xs tracking-[0.15em] uppercase transition-all duration-300 ${
+                  activeSection === item.id
+                    ? 'text-[#00ff88] bg-[#00ff88]/10'
+                    : 'text-[#8888aa] hover:text-white hover:bg-[#1a1a2e]/50'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+        )}
       </div>
     </header>
   );

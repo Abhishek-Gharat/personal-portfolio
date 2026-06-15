@@ -775,10 +775,6 @@ img, video {
   height: 5rem;
 }
 
-.h-14 {
-  height: 3.5rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -855,8 +851,8 @@ img, video {
   width: 60%;
 }
 
-.w-32 {
-  width: 8rem;
+.w-20 {
+  width: 5rem;
 }
 
 .w-2\.5 {
@@ -865,14 +861,6 @@ img, video {
 
 .w-24 {
   width: 6rem;
-}
-
-.w-14 {
-  width: 3.5rem;
-}
-
-.w-20 {
-  width: 5rem;
 }
 
 .\!min-w-0 {
@@ -1281,9 +1269,8 @@ img, video {
   background-color: #050508e6;
 }
 
-.bg-\[\#f59e0b\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 158 11 / var(--tw-bg-opacity));
+.bg-\[\#00ff88\]\/10 {
+  background-color: #00ff881a;
 }
 
 .bg-gradient-to-t {
@@ -1462,6 +1449,11 @@ img, video {
   padding-bottom: 0;
 }
 
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .px-1\.5 {
   padding-left: .375rem;
   padding-right: .375rem;
@@ -1470,11 +1462,6 @@ img, video {
 .px-1 {
   padding-left: .25rem;
   padding-right: .25rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .pt-24 {
@@ -1491,10 +1478,6 @@ img, video {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pt-3 {
-  padding-top: .75rem;
 }
 
 .text-left {
@@ -1730,12 +1713,12 @@ img, video {
   opacity: .7;
 }
 
-.opacity-40 {
-  opacity: .4;
-}
-
 .opacity-60 {
   opacity: .6;
+}
+
+.opacity-40 {
+  opacity: .4;
 }
 
 .shadow-lg {
@@ -2130,6 +2113,10 @@ body {
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[\#1a1a2e\]\/50:hover {
+  background-color: #1a1a2e80;
+}
+
 .hover\:text-accent:hover {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity));
@@ -2153,10 +2140,6 @@ body {
 .hover\:text-\[\#050508\]:hover {
   --tw-text-opacity: 1;
   color: rgb(5 5 8 / var(--tw-text-opacity));
-}
-
-.hover\:underline:hover {
-  text-decoration-line: underline;
 }
 
 .active\:scale-100:active {
@@ -2211,20 +2194,16 @@ body {
 }
 
 @media (min-width: 640px) {
-  .sm\:mb-8 {
-    margin-bottom: 2rem;
-  }
-
-  .sm\:mb-16 {
-    margin-bottom: 4rem;
-  }
-
   .sm\:mb-12 {
     margin-bottom: 3rem;
   }
 
   .sm\:mt-16 {
     margin-top: 4rem;
+  }
+
+  .sm\:mb-16 {
+    margin-bottom: 4rem;
   }
 
   .sm\:flex {
@@ -2235,24 +2214,12 @@ body {
     height: 1rem;
   }
 
-  .sm\:h-16 {
-    height: 4rem;
-  }
-
-  .sm\:w-auto {
-    width: auto;
-  }
-
   .sm\:w-4 {
     width: 1rem;
   }
 
   .sm\:w-32 {
     width: 8rem;
-  }
-
-  .sm\:w-16 {
-    width: 4rem;
   }
 
   .sm\:grid-cols-2 {
@@ -2273,10 +2240,6 @@ body {
 
   .sm\:justify-between {
     justify-content: space-between;
-  }
-
-  .sm\:gap-4 {
-    gap: 1rem;
   }
 
   .sm\:p-4 {
@@ -2308,12 +2271,12 @@ body {
     line-height: 2.5rem;
   }
 
-  .sm\:text-\[10px\] {
-    font-size: 10px;
-  }
-
   .sm\:text-\[9px\] {
     font-size: 9px;
+  }
+
+  .sm\:text-\[8px\] {
+    font-size: 8px;
   }
 
   .sm\:text-lg {
@@ -2326,28 +2289,18 @@ body {
     line-height: 1.25rem;
   }
 
-  .sm\:text-\[8px\] {
-    font-size: 8px;
-  }
-
   .sm\:text-xs {
     font-size: .75rem;
     line-height: 1rem;
   }
 
+  .sm\:text-\[10px\] {
+    font-size: 10px;
+  }
+
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 }
 
@@ -2416,12 +2369,12 @@ body {
     padding: 3rem;
   }
 
-  .md\:p-5 {
-    padding: 1.25rem;
-  }
-
   .md\:p-6 {
     padding: 1.5rem;
+  }
+
+  .md\:p-5 {
+    padding: 1.25rem;
   }
 
   .md\:py-24 {
@@ -2458,10 +2411,6 @@ body {
     font-size: .75rem;
     line-height: 1rem;
   }
-
-  .md\:text-\[9px\] {
-    font-size: 9px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -2479,6 +2428,48 @@ body {
 
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .lg\:pl-16 {
+    padding-left: 4rem;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/*# sourceMappingURL=styles_0rvvg2b._.css.map*/plate-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-1 {
