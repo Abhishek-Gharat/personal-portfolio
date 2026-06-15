@@ -109,17 +109,80 @@ const ProjectWorkflowNode = ({ project, index, isVisible }) => {
               }}
             />
 
-            {/* Center icon/label */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+            {/* Center geometric design */}
+            <div className="absolute inset-0 flex items-center justify-center">
               <div
-                className="text-4xl sm:text-5xl transition-transform duration-500"
-                style={{ transform: isHovered ? 'scale(1.2) rotate(12deg)' : 'scale(1)' }}
+                className="relative transition-transform duration-500"
+                style={{ transform: isHovered ? 'scale(1.15) rotate(8deg)' : 'scale(1)' }}
               >
-                {project.logo}
+                {/* Outer ring */}
+                <div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    width: '80px',
+                    height: '80px',
+                    border: `2px solid ${color}40`,
+                    left: '50%',
+                    top: '50%',
+                    transform: 'translate(-50%, -50%)'
+                  }}
+                />
+                {/* Inner geometric pattern */}
+                <div
+                  className="absolute"
+                  style={{
+                    width: '60px',
+                    height: '60px',
+                    left: '50%',
+                    top: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    background: `linear-gradient(135deg, ${color}20 0%, ${color}05 100%)`
+                  }}
+                >
+                  {/* Cross pattern */}
+                  <div
+                    className="absolute"
+                    style={{
+                      width: '2px',
+                      height: '100%',
+                      backgroundColor: color,
+                      opacity: 0.3,
+                      left: '50%',
+                      transform: 'translateX(-50%)'
+                    }}
+                  />
+                  <div
+                    className="absolute"
+                    style={{
+                      height: '2px',
+                      width: '100%',
+                      backgroundColor: color,
+                      opacity: 0.3,
+                      top: '50%',
+                      transform: 'translateY(-50%)'
+                    }}
+                  />
+                  {/* Corner dots */}
+                  {[
+                    { top: '10%', left: '10%' },
+                    { top: '10%', right: '10%' },
+                    { bottom: '10%', left: '10%' },
+                    { bottom: '10%', right: '10%' }
+                  ].map((pos, i) => (
+                    <div
+                      key={i}
+                      className="absolute rounded-full"
+                      style={{
+                        width: '4px',
+                        height: '4px',
+                        backgroundColor: color,
+                        opacity: 0.6,
+                        ...pos
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#8888aa]">
-                {project.featured ? 'Featured' : 'Project'}
-              </span>
             </div>
 
             {/* Gradient overlay */}
