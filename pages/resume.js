@@ -56,12 +56,6 @@ const Resume = () => {
                   </svg>
                   Download PDF
                 </a>
-                <button
-                  onClick={() => window.print()}
-                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors border border-white/10 bg-white/5 hover:bg-white/10"
-                >
-                  Print
-                </button>
               </div>
             </div>
 
