@@ -35,8 +35,8 @@ const Contact = ({ data }) => {
           <div className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400 mb-3">
             04 — Contact
           </div>
-          <h2 className="font-condensed text-5xl sm:text-6xl font-black uppercase tracking-tight">
-            Let's Work Together
+          <h2 className="zk-display text-5xl sm:text-6xl tracking-tight">
+            Let&apos;s build your next interface
           </h2>
           <p className="mt-4 text-zinc-400 max-w-xl mx-auto">
             Open to frontend roles in Mumbai / Remote. Fastest reply is email.

@@ -168,7 +168,7 @@ const Experience = ({ experience = [], education = [] }) => {
     <section
       id="experience"
       ref={sectionRef}
-      className="bg-white py-24 px-4 sm:px-6 lg:px-8 dark:bg-dark-bg"
+      className="bg-[#FFFBF2] py-24 px-4 sm:px-6 lg:px-8 dark:bg-dark-bg"
     >
       <div className="mx-auto max-w-4xl">
         <div
@@ -177,7 +177,7 @@ const Experience = ({ experience = [], education = [] }) => {
           <div className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-700 mb-4 dark:text-emerald-400">
             01 — Experience
           </div>
-          <h2 className="font-condensed text-5xl sm:text-6xl font-black uppercase tracking-tight text-zinc-900 dark:text-white">
+          <h2 className="zk-display text-5xl sm:text-6xl tracking-tight text-zinc-900 dark:text-white">
             Work History
           </h2>
           <p className="mt-4 max-w-xl text-base leading-7 text-zinc-600 dark:text-zinc-400">

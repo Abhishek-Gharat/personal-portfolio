@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Reveal from '../ui/Reveal';
 
 const SkillGroup = ({ title, skills }) => {
   return (
-    <div className="bg-white border border-zinc-200 rounded-2xl p-6 dark:bg-zinc-900 dark:border-zinc-800">
+    <div className="h-full bg-white border border-zinc-200 rounded-2xl p-6 dark:bg-zinc-900 dark:border-zinc-800">
       <h3 className="font-mono text-xs uppercase tracking-[0.15em] text-zinc-500 mb-4 dark:text-zinc-400">
         {title}
       </h3>
@@ -39,14 +40,14 @@ const Skills = ({ skills }) => {
     <section
       id="skills"
       ref={sectionRef}
-      className="bg-white py-20 px-4 sm:px-6 lg:px-8 dark:bg-dark-bg"
+      className="bg-[#FFFBF2] py-20 px-4 sm:px-6 lg:px-8 dark:bg-dark-bg"
     >
       <div className="max-w-5xl mx-auto">
         <div className={`mb-12 transition-all duration-500 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-700 mb-3 dark:text-emerald-400">
             03 — Skills
           </div>
-          <h2 className="font-condensed text-5xl sm:text-6xl font-black uppercase tracking-tight text-zinc-900 dark:text-white">
+          <h2 className="zk-display text-5xl sm:text-6xl tracking-tight text-zinc-900 dark:text-white">
             Tech Stack
           </h2>
           <p className="mt-3 text-zinc-600 max-w-2xl dark:text-zinc-400">
@@ -55,9 +56,15 @@ const Skills = ({ skills }) => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-5">
-          <SkillGroup title="Frontend" skills={skills.frontend} />
-          <SkillGroup title="Backend" skills={skills.backend} />
-          <SkillGroup title="Tools" skills={skills.tools} />
+          <Reveal delay={0} className="h-full">
+            <SkillGroup title="Frontend" skills={skills.frontend} />
+          </Reveal>
+          <Reveal delay={90} className="h-full">
+            <SkillGroup title="Backend" skills={skills.backend} />
+          </Reveal>
+          <Reveal delay={180} className="h-full">
+            <SkillGroup title="Tools" skills={skills.tools} />
+          </Reveal>
         </div>
       </div>
     </section>

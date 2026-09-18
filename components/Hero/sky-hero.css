@@ -1,0 +1,180 @@
+/* Sky hero — original artwork + motion, same mechanics as the reference:
+   layered sky, drifting clouds, per-letter entrance, rolling verb,
+   vinyl-player widget, scroll parallax. All art hand-drawn here. */
+
+.zk-hero {
+  --sky1: #5db4f2;
+  --sky2: #9adcfa;
+  --sky3: #e9f8ff;
+  --ink: #060606;
+  --cream: #fff9e9;
+  --sun: #f6c740;
+}
+
+.zk-hero.zk-night {
+  --sky1: #070b1d;
+  --sky2: #131c3f;
+  --sky3: #2a3a63;
+  --ink: #f5f1e4;
+  --cream: #fbf5e3;
+}
+
+.zk-sky {
+  background: linear-gradient(180deg, var(--sky1) 0%, var(--sky2) 52%, var(--sky3) 100%);
+  transition: background 0.6s ease;
+}
+
+/* film grain */
+.zk-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.1;
+  mix-blend-mode: overlay;
+}
+
+/* striped sun — hand-drawn */
+.zk-sun {
+  background:
+    radial-gradient(circle at 35% 32%, rgba(255, 255, 255, 0.55), transparent 46%),
+    repeating-linear-gradient(-48deg, var(--sun) 0 7px, rgba(246, 199, 64, 0) 7px 14px);
+  -webkit-mask-image: radial-gradient(circle, #000 62%, transparent 63%);
+  mask-image: radial-gradient(circle, #000 62%, transparent 63%);
+}
+
+.zk-night .zk-sun { opacity: 0; }
+/* moon: crisp cream disc with soft craters + gentle terminator shading */
+.zk-moon {
+  opacity: 0;
+  background:
+    radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 46%),
+    radial-gradient(circle at 61% 53%, #dcc78f 0 8%, rgba(220, 199, 143, 0) 9.5%),
+    radial-gradient(circle at 41% 65%, #e3d09d 0 6%, rgba(227, 208, 157, 0) 7.5%),
+    radial-gradient(circle at 69% 30%, #e3d09d 0 4.5%, rgba(227, 208, 157, 0) 6%),
+    radial-gradient(circle at 50% 50%, #fef8e1 0 58%, #f4e5b9 71%, rgba(244, 229, 185, 0) 73%);
+  box-shadow:
+    0 0 36px rgba(253, 246, 221, 0.35),
+    0 0 110px rgba(253, 246, 221, 0.16);
+  transition: opacity 0.6s ease;
+}
+.zk-night .zk-moon { opacity: 1; }
+
+/* stars (night only) */
+.zk-stars { opacity: 0; transition: opacity 0.8s ease; }
+.zk-night .zk-stars { opacity: 1; }
+.zk-stars span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background: #fff;
+  animation: zk-twinkle 3.2s ease-in-out infinite;
+}
+@keyframes zk-twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+/* clouds — constant drift + JS parallax via --px */
+.zk-cloud { animation: zk-drift 9s ease-in-out infinite alternate; }
+.zk-cloud-b { animation-duration: 12s; animation-delay: -4s; }
+.zk-cloud-c { animation-duration: 14s; animation-delay: -8s; }
+@keyframes zk-drift {
+  from { translate: -14px 0; }
+  to { translate: 16px -8px; }
+}
+
+.zk-bird { animation: zk-bird 7s ease-in-out infinite alternate; }
+@keyframes zk-bird {
+  from { translate: 0 0; }
+  to { translate: -22px -10px; }
+}
+
+/* per-letter entrance */
+.zk-mask { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.zk-letter {
+  display: inline-block;
+  transform: translateY(115%);
+  animation: zk-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes zk-rise {
+  to { transform: translateY(0); }
+}
+
+/* rolling verb — overshoot easing mirrors the reference timing */
+.zk-roll-viewport { overflow: hidden; height: 1em; }
+.zk-roll {
+  transition: transform 560ms cubic-bezier(0.22, 1.15, 0.36, 1);
+}
+.zk-roll-word {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* vinyl disks */
+.zk-disk { animation: zk-spin 4s linear infinite; animation-play-state: paused; }
+.zk-playing .zk-disk { animation-play-state: running; }
+@keyframes zk-spin {
+  to { transform: rotate(360deg); }
+}
+.zk-eq span {
+  display: inline-block;
+  width: 3px;
+  margin-right: 2px;
+  background: currentColor;
+  height: 6px;
+  vertical-align: bottom;
+}
+.zk-playing .zk-eq span { animation: zk-eq 0.9s ease-in-out infinite alternate; }
+.zk-playing .zk-eq span:nth-child(2) { animation-delay: -0.3s; }
+.zk-playing .zk-eq span:nth-child(3) { animation-delay: -0.6s; }
+@keyframes zk-eq {
+  from { height: 4px; }
+  to { height: 14px; }
+}
+
+/* eyebrow dot pulse */
+.zk-dot { animation: zk-pulse 2.2s ease-in-out infinite; }
+@keyframes zk-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.6; }
+}
+
+/* scroll cue */
+.zk-cue { animation: zk-cue 2s ease-in-out infinite; }
+@keyframes zk-cue {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+/* --- shared section language ----------------------------------------------
+   Serif display headings + cream paper surfaces + scroll reveals,
+   echoing the sky hero in the sections below it. */
+
+.zk-display {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.zk-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--zk-d, 0ms);
+}
+.zk-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zk-cloud, .zk-bird, .zk-disk, .zk-stars span, .zk-dot, .zk-cue, .zk-playing .zk-eq span {
+    animation: none;
+  }
+  .zk-letter { transform: none; animation-duration: 0.01ms; }
+  .zk-roll { transition-duration: 0.01ms; }
+  .zk-reveal { opacity: 1; transform: none; transition: none; }
+}

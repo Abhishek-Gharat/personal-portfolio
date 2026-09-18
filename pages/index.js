@@ -1,11 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Hero from '../components/Hero';
+import Manifesto from '../components/Manifesto';
+import CompanyStrip from '../components/CompanyStrip';
 import Navigation from '../components/Navigation';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Experience from '../components/Experience';
-import Contact from '../components/Contact';
+import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 import data from '../data/portfolio.json';
 
@@ -42,10 +44,12 @@ export default function Home() {
         
         <main>
           <Hero data={data} />
+          <Manifesto data={data} />
           <Experience experience={data.experience} education={data.education} />
+          <CompanyStrip experience={data.experience} />
           <Projects projects={data.projects} />
           <Skills skills={data.skills} />
-          <Contact data={data} />
+          <Testimonials testimonials={data.testimonials} />
         </main>
 
         <Footer data={data} />
