@@ -3,7 +3,6 @@ import Reveal from '../ui/Reveal';
 import LegoOnboarding from '../ui/interactive-tech-stack-builder';
 
 const StackBuilder = () => {
-  const [visible, setVisible] = useState(true);
   const [builtStack, setBuiltStack] = useState([]);
 
   const handleComplete = (stack) => {
@@ -39,27 +38,14 @@ const StackBuilder = () => {
           )}
         </Reveal>
 
-        {visible ? (
-          <Reveal delay={100}>
-            <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-[#f8ece4] shadow-[0_2px_16px_rgba(0,0,0,0.04)] dark:border-zinc-800 dark:bg-zinc-950">
-              <LegoOnboarding
-                className="!min-h-0"
-                onComplete={handleComplete}
-                onSkip={() => setVisible(false)}
-              />
-            </div>
-          </Reveal>
-        ) : (
-          <div className="text-center">
-            <button
-              type="button"
-              onClick={() => setVisible(true)}
-              className="rounded-xl border border-zinc-300 bg-white px-6 py-3 text-sm font-medium text-zinc-900 transition-colors hover:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white dark:hover:border-white"
-            >
-              Show playground
-            </button>
+        <Reveal delay={100}>
+          <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-[#f8ece4] shadow-[0_2px_16px_rgba(0,0,0,0.04)] dark:border-zinc-800 dark:bg-zinc-950">
+            <LegoOnboarding
+              className="!min-h-0"
+              onComplete={handleComplete}
+            />
           </div>
-        )}
+        </Reveal>
       </div>
     </section>
   );
