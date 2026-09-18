@@ -5,6 +5,7 @@ import Manifesto from '../components/Manifesto';
 import CompanyStrip from '../components/CompanyStrip';
 import Navigation from '../components/Navigation';
 import Skills from '../components/Skills';
+import StackBuilder from '../components/StackBuilder';
 import Projects from '../components/Projects';
 import Experience from '../components/Experience';
 import Testimonials from '../components/Testimonials';
@@ -49,6 +50,7 @@ export default function Home() {
           <CompanyStrip experience={data.experience} />
           <Projects projects={data.projects} />
           <Skills skills={data.skills} />
+          <StackBuilder />
           <Testimonials testimonials={data.testimonials} />
         </main>
 
