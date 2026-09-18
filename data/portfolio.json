@@ -7,6 +7,7 @@
   "description": "Frontend developer with experience building workflow automation tools, production-grade applications, and scalable user interfaces using React, Next.js, TypeScript, and modern frontend technologies.",
   "location": "Mumbai, Maharashtra, India",
   "email": "gharatabhi53@gmail.com",
+  "phone": "9767184375",
   "showCursor": false,
   "showBlog": true,
   "darkMode": true,
@@ -203,36 +204,62 @@
   "resume": {
     "tagline": "Frontend Developer specializing in React Flow & Next.js",
     "description": "Frontend developer with experience building workflow automation tools, production-grade applications, and scalable user interfaces using React, Next.js, TypeScript, and modern frontend technologies.",
+    "phone": "9767184375",
+    "location": "Maharashtra, Mumbai",
+    "pdfUrl": "/Abhishek_Gharat_Resume.pdf",
     "experiences": [
       {
         "id": "1",
-        "dates": "Oct 2024 - May 2025",
-        "type": "Full-time",
-        "position": "Frontend Developer at Hridayam Soft Solutions",
-        "bullets": "Worked on live Collection System production project\nIntegrated RESTful APIs with Laravel and PostgreSQL backend\nBuilt frontend using Next.js and Ant Design\nDeveloped and maintained custom NPM packages\nParticipated in code reviews and team collaboration"
+        "dates": "Oct 2024 – May 2025",
+        "type": "Onsite",
+        "position": "Frontend Developer at HRIDAYAM SOFT SOLUTIONS",
+        "bullets": "Worked on a live production project named Collection System as a frontend developer.\nCollaborated with backend developers to integrate RESTful APIs into CMS-style frontend components, delivering dynamic, content-driven pages with Laravel and PostgreSQL as the backend.\nBuilt and designed the frontend using Next.js and Ant Design, ensuring a responsive and dynamic user experience.\nUsed Git/GitHub for version control and participated in code reviews and team collaboration.\nDeveloped and maintained custom NPM packages, enhancing code reusability and project scalability."
       },
       {
         "id": "2",
-        "dates": "Jul 2024 - Sep 2024",
-        "type": "Freelance",
-        "position": "Frontend Developer at Gnapika",
-        "bullets": "Built frontend for e-commerce website\nIntegrated APIs with Flask and FastAPI backends\nDeveloped responsive and user-friendly interface\nEnhanced shopping experiences and user engagement"
+        "dates": "July 2024 – Sep 2024",
+        "type": "Remote",
+        "position": "Frontend Developer (Freelancer) at GNAPIKA",
+        "bullets": "Built the frontend for an e-commerce website, ensuring a responsive and user-friendly interface.\nCollaborated with Back-end developers to manage routing and API integration, utilizing Python, Flask, and FastAPI.\nDeveloped and maintained frontend components to streamline shopping experiences and enhance user engagement."
       },
       {
         "id": "3",
-        "dates": "Dec 2023 - Apr 2024",
-        "type": "Internship",
-        "position": "Software Developer Intern at RCube Consulting",
-        "bullets": "Developed interactive diagrams using React Flow\nVisualized core business processes\nStreamlined reporting process\nEnabled drag-and-connect node interactions"
+        "dates": "Dec 2023 – Apr 2024",
+        "type": "USA Remote",
+        "position": "Software Developer Intern at RCUBE CONSULTING",
+        "bullets": "Developed interactive diagrams using React Flow, a library for creating visualizations and workflows.\nVisualized core business processes, streamlining the reporting process.\nUse Case: Enabled users to drag and connect nodes for interactive process visualization."
       }
     ],
+    "personalProjects": [
+      {
+        "id": "1",
+        "title": "REACTVIZ",
+        "dates": "May 2026",
+        "bullets": "Developed an interactive codebase explorer that helps new developers understand unfamiliar projects faster through dependency mapping, circular dependency detection, analysis history, and AI explanations, using React, Vite, Express.js, SQLite, and React Flow.\nReduced developer onboarding time by delivering visual architecture insights and code relationship analysis through React Flow–based dependency visualization and REST API-driven analysis workflows."
+      },
+      {
+        "id": "2",
+        "title": "AI-POWERED EXAM MANAGEMENT PLATFORM",
+        "dates": "April 2026",
+        "bullets": "Built a full-stack examination and automation platform using React, Firebase Authentication, Telegram Bot API, and dashboard analytics to manage exams, students, and administrative workflows.\nAutomated notifications, exam operations, user management, and performance tracking through AI-driven features."
+      }
+    ],
+    "universityProjects": [
+      {
+        "id": "1",
+        "title": "HOTEL BOOKING SYSTEM",
+        "dates": "Nov 2023",
+        "bullets": "Developed a comprehensive hotel booking system leveraging React for frontend, Node.js and Express for backend, and MongoDB for database management."
+      }
+    ],
+    "technicalSkills": "React, Rest API, JavaScript, HTML5/CSS, MongoDB, SQL, Git, Next.js, React Native, TypeScript, React Flow, Web Performance Optimization, Debugging, Material UI, Node.Js, Express, Firebase, Problem Solving",
     "education": {
       "universityName": "Chandigarh University",
       "universityDate": "Jul 2022 - Jul 2024",
       "universityPara": "Master in Computer Applications in Computer Applications (CGPA: 7.48/10)"
     },
-    "languages": ["JavaScript", "TypeScript", "HTML5", "CSS3"],
-    "frameworks": ["React", "Next.js", "React Flow", "Express", "Node.js"],
-    "others": ["Git", "GitHub", "Figma", "PostgreSQL", "MongoDB", "Firebase", "React Native"]
+    "languages": ["React", "Rest API", "JavaScript", "HTML5/CSS", "TypeScript"],
+    "frameworks": ["Next.js", "React Flow", "Node.Js", "Express", "React Native", "Material UI"],
+    "others": ["MongoDB", "SQL", "Git", "Firebase", "Web Performance Optimization", "Debugging", "Problem Solving"]
   }
 }

@@ -265,6 +265,7 @@ export const SkyHero = ({
           </button>
           <a
             href={secondaryCtaHref}
+            download="Abhishek_Gharat_Resume.pdf"
             className="rounded-full border-2 border-[#fff9e9]/70 px-7 py-[10px] text-sm font-semibold text-[#fff9e9] drop-shadow-sm transition-colors hover:border-[#fff9e9] hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
           >
             Download Resume

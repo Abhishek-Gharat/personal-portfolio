@@ -27,7 +27,7 @@ const Hero = ({ data }) => {
         tagline="React · Next.js · React Flow — production interfaces"
         primaryCta="View My Work"
         onPrimaryCta={scrollToProjects}
-        secondaryCtaHref={data?.showResume === false ? "/#projects" : "/resume"}
+        secondaryCtaHref={data?.resume?.pdfUrl ?? "/Abhishek_Gharat_Resume.pdf"}
         githubHref={githubHref}
         linkedinHref={linkedinHref}
       />

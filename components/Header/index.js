@@ -93,7 +93,8 @@ const Header = () => {
 
               {/* Resume Button */}
               <a
-                href="/resume"
+                href="/Abhishek_Gharat_Resume.pdf"
+                download="Abhishek_Gharat_Resume.pdf"
                 className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium bg-accent hover:bg-accent-dark text-white rounded-lg transition-colors"
               >
                 Resume
@@ -154,13 +155,14 @@ const Header = () => {
                   </motion.a>
                 ))}
                 <motion.a
-                  href="/resume"
+                  href="/Abhishek_Gharat_Resume.pdf"
+                  download="Abhishek_Gharat_Resume.pdf"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.05 }}
                   className="px-4 py-3 text-base font-medium text-white bg-accent hover:bg-accent-dark rounded-lg transition-colors mt-2"
                 >
-                  View Resume
+                  Download Resume
                 </motion.a>
               </nav>
             </div>
